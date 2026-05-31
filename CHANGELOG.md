@@ -1,10 +1,12 @@
 # Changelog — Where the Roads End
 
 ## 2026-06-01
-- **Declutter — disabled 5 unused mods → 208 active jars** (all intentional; snapshotted via `World snapshot 2026-06-01 (pre-TaCZ removal)`, loaded through the missing-content screen, base verified intact):
+- **Declutter — disabled 7 unused mods → 206 active jars** (all intentional; world snapshotted before the content/worldgen ones, loaded through the missing-content screen, base verified intact):
   - `tacz` (Timeless & Classics Guns: Zero) — unused, poor shader rendering, no dependents. (`tacz/` + `tacz_backup/` data folders left on disk; can delete to reclaim space.)
-  - `RegionsUnexploredForge` — ⚠️ **worldgen**: already-generated RU biome areas may have missing blocks; new chunks generate without it. Pre-removal snapshot retains RU terrain if ever wanted back.
+  - `RegionsUnexploredForge` — ⚠️ **worldgen**: already-generated RU biome areas may have missing blocks; new chunks generate without it. `World snapshot 2026-06-01 (pre-TaCZ removal)` retains RU terrain if ever wanted back.
   - `doom-neo` (content), `improved-village-placement` + `villagespawnpoint` (village/spawn worldgen tweaks).
+  - `0World2Create` + `global-server-config` — pointless behavior-only utilities, no world data (zero-risk cut).
+- **Phase 1 (stabilize the pack) complete** → tagged **`v0.1-stable`** as the known-good baseline: 206 mods, custom zombie systems working, fully backed up + version-controlled. Next: Phase 2 (day-based zombie phase curve).
 - Identified the "mystery" mods via jar metadata: `eh`=Horde Hoard (content), `wmp`=Warborn Military Pack (SuperbWarfare add-on), `deimos`/`TES`=libraries (KEEP), `0World2Create`/`global-server-config`=safe-to-cut utilities (still pending). The two `fabric-api` jars are NOT duplicates (Forgified Fabric API + real Fabric API — keep both).
 
 ## 2026-05-31
