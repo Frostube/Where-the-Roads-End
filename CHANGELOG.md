@@ -1,7 +1,10 @@
 # Changelog — Where the Roads End
 
 ## 2026-06-01
-- **Removed TaCZ** (`tacz` — Timeless & Classics Guns: Zero): unused, rendered poorly under shaders, no mods depended on it. Snapshotted first → loaded through the missing-content screen → base verified intact (no holes). → **212 active jars**. (`tacz/` + `tacz_backup/` data folders left on disk, harmless; can delete to reclaim space.)
+- **Declutter — disabled 5 unused mods → 208 active jars** (all intentional; snapshotted via `World snapshot 2026-06-01 (pre-TaCZ removal)`, loaded through the missing-content screen, base verified intact):
+  - `tacz` (Timeless & Classics Guns: Zero) — unused, poor shader rendering, no dependents. (`tacz/` + `tacz_backup/` data folders left on disk; can delete to reclaim space.)
+  - `RegionsUnexploredForge` — ⚠️ **worldgen**: already-generated RU biome areas may have missing blocks; new chunks generate without it. Pre-removal snapshot retains RU terrain if ever wanted back.
+  - `doom-neo` (content), `improved-village-placement` + `villagespawnpoint` (village/spawn worldgen tweaks).
 - Identified the "mystery" mods via jar metadata: `eh`=Horde Hoard (content), `wmp`=Warborn Military Pack (SuperbWarfare add-on), `deimos`/`TES`=libraries (KEEP), `0World2Create`/`global-server-config`=safe-to-cut utilities (still pending). The two `fabric-api` jars are NOT duplicates (Forgified Fabric API + real Fabric API — keep both).
 
 ## 2026-05-31
