@@ -5,7 +5,9 @@
 # ...then re-include just the parts we track:
 !/.gitignore
 !/README.md
+!/CHANGELOG.md
 !/mods-list.txt
+!/mods-disabled.txt
 !/options.txt
 !/kubejs/
 !/config/

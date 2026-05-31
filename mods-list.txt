@@ -54,7 +54,6 @@ Neat-1.20.1-41-FORGE.jar
 Patchouli-1.20.1-84-FORGE.jar
 PickUpNotifier-v8.0.0-1.20.1-Forge.jar
 Placebo-1.20.1-8.6.2.jar
-Presence Footsteps [FORGE] 1.0.0.jar
 PresenceFootsteps-1.20.1-1.9.1-beta.1.jar
 Prism-1.20.1-forge-1.0.5.jar
 PuzzlesLib-v8.1.25-1.20.1-Forge.jar

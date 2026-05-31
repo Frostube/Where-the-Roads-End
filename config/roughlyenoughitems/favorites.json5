@@ -310,7 +310,8 @@
 		"{data:{Count:1b,id:\"minecraft:cooked_mutton\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
 		"{data:{Count:1b,id:\"minecraft:potion\",tag:{CustomPotionColor:14548739,CustomPotionEffects:[{Duration:1800,Id:12}],display:{Lore:['[{\"text\":\"Stablizes people with\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"heat fever or heat stroke.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"Does not treat regular\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"fever.\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"-\",\"italic\":false,\"color\":\"red\"},{\"text\":\" \",\"color\":\"white\"},{\"text\":\"Non-Prescription\",\"color\":\"aqua\"}]'],Name:'[{\"text\":\"Antipyretic\",\"italic\":false,\"color\":\"aqua\"},{\"text\":\" \"},{\"text\":\"[\",\"color\":\"white\"},{\"text\":\"500MG\",\"color\":\"gold\"},{\"text\":\"]\",\"color\":\"white\"}]'}},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
 		"{data:{Count:1b,id:\"legendarysurvivaloverhaul:snow_leggings\",tag:{Damage:15},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-		"{data:{Count:1b,id:\"minecraft:sweet_berries\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}"
+		"{data:{Count:1b,id:\"minecraft:sweet_berries\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
+		"{data:{Count:1b,id:\"tacz:modern_kinetic_gun\",tag:{AttachmentSTOCK:{Count:1b,id:\"tacz:attachment\",tag:{AttachmentId:\"tacz:oem_stock_heavy\"}},GunCurrentAmmoCount:34,GunFireMode:\"AUTO\",GunId:\"tacz:rpk\",HasBulletInBarrel:1b},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}"
 	],
 	"hiddenFavorites": [],
 	"displays": []
