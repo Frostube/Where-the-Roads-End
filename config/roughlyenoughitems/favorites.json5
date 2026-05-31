@@ -1,7 +1,6 @@
 {
 	"favorites": [
 		"{data:{Count:1b,id:\"superbwarfare:rocket\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-		"{data:{Count:1b,id:\"doom:doom_boots\",tag:{Damage:0,Enchantments:[{id:\"minecraft:thorns\",lvl:3s},{id:\"minecraft:protection\",lvl:4s},{id:\"minecraft:depth_strider\",lvl:3s},{id:\"minecraft:feather_falling\",lvl:4s},{id:\"minecraft:unbreaking\",lvl:3s}]},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
 		"{data:{Count:1b,id:\"minecraft:stone_axe\",tag:{Damage:76},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
 		"{data:{Count:1b,id:\"minecraft:potion\",tag:{Potion:\"minecraft:long_night_vision\"},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
 		"{data:{Count:1b,id:\"minecraft:flint_and_steel\",tag:{Damage:0,Enchantments:[{id:\"minecraft:unbreaking\",lvl:3s}]},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
@@ -14,7 +13,6 @@
 		"{data:{Count:1b,id:\"minecraft:paper\",tag:{display:{Name:'{\"text\":\"Sike you thought something would be\"}'}},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
 		"{data:{Count:1b,id:\"minecraft:raw_gold\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
 		"{data:{Count:1b,id:\"minecraft:flint_and_steel\",tag:{Damage:0},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-		"{data:{Count:1b,id:\"doom:e1m1_block9\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
 		"{data:{Count:1b,id:\"supplementaries:candle_holder_yellow\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
 		"{data:{Count:1b,id:\"minecraft:bread\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
 		"{data:{Count:1b,id:\"quark:purple_shingles_slab\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
@@ -310,8 +308,7 @@
 		"{data:{Count:1b,id:\"minecraft:cooked_mutton\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
 		"{data:{Count:1b,id:\"minecraft:potion\",tag:{CustomPotionColor:14548739,CustomPotionEffects:[{Duration:1800,Id:12}],display:{Lore:['[{\"text\":\"Stablizes people with\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"heat fever or heat stroke.\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"Does not treat regular\",\"italic\":false,\"color\":\"white\"}]','[{\"text\":\"fever.\",\"italic\":false,\"color\":\"white\"},{\"text\":\"\",\"italic\":false,\"color\":\"dark_purple\"}]','[{\"text\":\"-\",\"italic\":false,\"color\":\"red\"},{\"text\":\" \",\"color\":\"white\"},{\"text\":\"Non-Prescription\",\"color\":\"aqua\"}]'],Name:'[{\"text\":\"Antipyretic\",\"italic\":false,\"color\":\"aqua\"},{\"text\":\" \"},{\"text\":\"[\",\"color\":\"white\"},{\"text\":\"500MG\",\"color\":\"gold\"},{\"text\":\"]\",\"color\":\"white\"}]'}},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
 		"{data:{Count:1b,id:\"legendarysurvivaloverhaul:snow_leggings\",tag:{Damage:15},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-		"{data:{Count:1b,id:\"minecraft:sweet_berries\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-		"{data:{Count:1b,id:\"tacz:modern_kinetic_gun\",tag:{AttachmentSTOCK:{Count:1b,id:\"tacz:attachment\",tag:{AttachmentId:\"tacz:oem_stock_heavy\"}},GunCurrentAmmoCount:34,GunFireMode:\"AUTO\",GunId:\"tacz:rpk\",HasBulletInBarrel:1b},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}"
+		"{data:{Count:1b,id:\"minecraft:sweet_berries\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}"
 	],
 	"hiddenFavorites": [],
 	"displays": []

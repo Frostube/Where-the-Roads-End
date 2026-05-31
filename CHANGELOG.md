@@ -1,5 +1,9 @@
 # Changelog — Where the Roads End
 
+## 2026-06-01
+- **Removed TaCZ** (`tacz` — Timeless & Classics Guns: Zero): unused, rendered poorly under shaders, no mods depended on it. Snapshotted first → loaded through the missing-content screen → base verified intact (no holes). → **212 active jars**. (`tacz/` + `tacz_backup/` data folders left on disk, harmless; can delete to reclaim space.)
+- Identified the "mystery" mods via jar metadata: `eh`=Horde Hoard (content), `wmp`=Warborn Military Pack (SuperbWarfare add-on), `deimos`/`TES`=libraries (KEEP), `0World2Create`/`global-server-config`=safe-to-cut utilities (still pending). The two `fabric-api` jars are NOT duplicates (Forgified Fabric API + real Fabric API — keep both).
+
 ## 2026-05-31
 
 ### Declutter (Phase 1)
