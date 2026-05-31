@@ -1,0 +1,20 @@
+
+#Daylight Zombies Configuration
+[general]
+	#Enable zombies to spawn during daylight hours
+	enableDaylightSpawning = true
+
+[spawning]
+	#Chance multiplier for zombies to spawn in daylight (0.0-1.0), this controls the flow rate of zombies.
+	#Range: 0.0 ~ 1.0
+	daylightSpawnChance = 0.5
+	#Maximum light level where zombies can spawn.
+	#Range: 0 ~ 15
+	maxSpawnLightLevel = 15
+	#Zombies added per player in the world, this caps at the maxDaylightZombies.
+	#Range: 0 ~ 100
+	maxDaylightZombies = 30
+	#Cooldown in seconds between zombie spawn attempts, keep this high so that you don't get constant spawning, think flat world in minecraft with slimes.
+	#Range: 0 ~ 3600
+	spawnCooldownSeconds = 10
+

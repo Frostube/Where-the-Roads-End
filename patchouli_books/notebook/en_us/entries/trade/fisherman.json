@@ -1,0 +1,27 @@
+{
+  "name": "Fisherman",
+  "icon": "minecraft:barrel",
+  "category": "patchouli:trade",
+  "advancement": "minecraft:adventure/trade",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "entity",
+      "entity": "minecraft:villager{VillagerData:{profession:'minecraft:fisherman',level:5,type:'minecraft:plains'}}",
+      "rotate": false,
+      "text": "His fishing rod is quite good, but it seems that only cooked fishes can satisfy everyone now"
+    },
+    {
+      "type": "trade",
+      "sell": "Sell",
+      "sell1": "minecraft:cod_bucket",
+      "sell2": "minecraft:cooked_cod",
+      "sell3": "minecraft:cooked_salmon",
+      "sell4": "minecraft:oak_boat,minecraft:spruce_boat,minecraft:birch_boat,minecraft:jungle_boat,minecraft:acacia_boat,minecraft:dark_oak_boat,minecraft:mangrove_boat,minecraft:cherry_boat,quark:ancient_boat,quark:azalea_boat,quark:blossom_boat,biomesoplenty:fir_boat,biomesoplenty:pine_boat,biomesoplenty:maple_boat,biomesoplenty:redwood_boat,biomesoplenty:mahogany_boat,biomesoplenty:jacaranda_boat,biomesoplenty:palm_boat,biomesoplenty:dead_boat,biomesoplenty:magic_boat,biomesoplenty:umbran_boat,biomesoplenty:hellbark_boat,biomesoplenty:empyreal_boat",
+      "sell5": "minecraft:fishing_rod{Enchantments:[{lvl:1s,id:'minecraft:lure'},{lvl:1s,id:'minecraft:luck_of_the_sea'},{lvl:1s,id:'minecraft:unbreaking'}]},minecraft:fishing_rod{Enchantments:[{lvl:2s,id:'minecraft:lure'},{lvl:2s,id:'minecraft:luck_of_the_sea'},{lvl:2s,id:'minecraft:unbreaking'}]},minecraft:fishing_rod{Enchantments:[{lvl:3s,id:'minecraft:lure'},{lvl:3s,id:'minecraft:luck_of_the_sea'},{lvl:3s,id:'minecraft:unbreaking'}]}",
+      "rec": "Receive",
+      "rec1": "quark:crab_leg",
+      "rec2": "minecraft:pufferfish"
+    }
+  ]
+}

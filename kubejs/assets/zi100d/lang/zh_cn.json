@@ -1,0 +1,8 @@
+{
+  "patchouli.wild_book": "荒野手册",
+  "patchouli.wild_book_desc": "$(li)记录世界存在的一些信息$(br)$(li)右键可以退回上一级$(br)$(li)妥善保管此手册$(br)$(li)$(2)$(l)标 * 为新增或修改内容",
+  "hordenight.load_tip": "Horde Nights v0.2 [僵尸入侵100天 修改版] by Rainy Realm Create & FlameFire - 已加载",
+  "hordenight.begin": "这将是一个可怕的夜晚…",
+  "hordenight.end_title": "游 戏 结 束",
+  "hordenight.end_sub": "僵尸已被击败"
+}

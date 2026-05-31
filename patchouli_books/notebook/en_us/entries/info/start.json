@@ -1,0 +1,25 @@
+{
+  "name": "Start",
+  "icon": "minecraft:iron_sword",
+  "category": "patchouli:info",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "p_text",
+      "text": "\"Clouds press low against the sky, a fierce wind carrying the stench of decay ravages the desolate wilderness. In the distance, the lostcity looms, eerie and ominous, shrouded in haze. Yet, within this deathly silence, a warm glow escapes from the edge of your vision. Perhaps there are villagers in the village, allies in this apocalypse...\""
+    },
+    {
+      "type": "p_text",
+      "text": "You may have noticed you're not empty-handed. Keep your items safe: $(br)$(l)$(li)Wild Book *1$(li)Wooden Sword *1$(li)Wooden Pickaxe *1$(li)Wooden Axe *1$(li)Cooked Beef *10$(li)Backpack *1"
+    },
+    {
+      "type": "title_text",
+      "title": "Start Game",
+      "text": "$(br)To start the game (especially for server), run the following command to directly start the default mode (requires cheats, invasion time 100 days):$(br)$(l)$(c:/zombiegame game start_game normal 100)/zombiegame game start_game normal 100$(/c)/$$(p)Otherwise, please run the following instead (same as [Click Here] in the chat):$(br)$(l)$(c:/zombiegame gui_set_up start_game)/zombiegame gui_set_up start_game$(/c)/$"
+    },
+    {
+      "type": "p_text",
+      "text": "If you make a mistake and need to cancel the current game, run (requires cheats):$(br)$(l)$(c:/zombiegame game cancel_game)/zombiegame game cancel_game$(/c)/$"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "队伍指令",
+  "icon": "minecraft:white_banner",
+  "category": "patchouli:info",
+  "read_by_default": true,
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "title_text",
+      "title": "队伍指令",
+      "text": "$(br)在多人游戏中组建队伍，共同建设根据地，抵抗入侵$(br)$(li)同一队伍可以无视距离在地图上显示所有成员的位置$(br)$(li)不同维度下可以打开世界地图，点击左下角切换维度查看其他维度队员的位置"
+    },
+    {
+      "type": "trade",
+      "sell1": "minecraft:red_banner",
+      "sell2": "minecraft:yellow_banner",
+      "sell3": "minecraft:lime_banner",
+      "sell4": "minecraft:cyan_banner",
+      "sell5": "minecraft:pink_banner",
+      "sell6": "minecraft:brown_banner",
+      "rec": "- 查看下一页 -"
+    },
+    {
+      "type": "title_text",
+      "title": "队长",
+      "text": "$(br)建立队伍：$(br)$(l)$(c:/openpac-parties create)/openpac-parties create/$$(p)邀请成员：$(br)$(l)/openpac-parties member invite <玩家名>/$$(p)移除成员：$(br)$(l)/openpac-parties member kick <玩家名>/$"
+    },
+    {
+      "type": "p_text",
+      "text": "解散队伍：$(br)$(l)/openpac-parties destroy confirm/$$(p)如果队长要加入其他队伍应先解散自己的队伍"
+    },
+    {
+      "type": "title_text",
+      "title": "队员",
+      "text": "$(br)加入队伍：收到队长邀请后在聊天栏点击同意$(p)离开队伍：$(br)$(l)/openpac-parties leave/$$(p)队伍内部发送消息：$(br)$(l)/opm <消息>/$"
+    }
+  ]
+}

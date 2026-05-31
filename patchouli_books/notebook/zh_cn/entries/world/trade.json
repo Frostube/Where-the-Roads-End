@@ -1,0 +1,19 @@
+{
+  "name": "村庄",
+  "icon": "minecraft:emerald",
+  "category": "patchouli:world",
+  "sortnum": 1,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "entity",
+      "entity": "minecraft:villager",
+      "name": "村民",
+      "rotate": false
+    },
+    {
+      "type": "p_text",
+      "text": "村民们加入了末世建设阵营，他们有你所需要的物资，没有他们就像你的枪没有了火药...$(p)他们为了协助幸存者的生存，开始$(l)出售/$和$(l)回收/$一些东西，可能这些甚至都不该与他们相关...$(p)$(l)>>>/$ $(2)与他们交易后可以在本书找到更多信息/$ $(l)<<</$"
+    }
+  ]
+}

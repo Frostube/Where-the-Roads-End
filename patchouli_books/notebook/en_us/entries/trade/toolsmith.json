@@ -1,0 +1,28 @@
+{
+  "name": "Toolsmith",
+  "icon": "minecraft:smithing_table",
+  "category": "patchouli:trade",
+  "advancement": "minecraft:adventure/trade",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "entity",
+      "entity": "minecraft:villager{VillagerData:{profession:'minecraft:toolsmith',level:5,type:'minecraft:plains'}}",
+      "rotate": false,
+      "text": "It seems that mining isn't important either"
+    },
+    {
+      "type": "trade",
+      "sell": "Sell",
+      "sell1": "minecraft:iron_shovel,minecraft:iron_axe",
+      "sell2": "minecraft:diamond_hoe",
+      "sell3": "minecraft:iron_axe{Enchantments:[{lvl:1s,id:'minecraft:efficiency'}]},minecraft:iron_pickaxe{Enchantments:[{lvl:2s,id:'minecraft:efficiency'}]},minecraft:iron_shovel{Enchantments:[{lvl:3s,id:'minecraft:efficiency'}]}",
+      "sell4": "minecraft:diamond_shovel{Enchantments:[{lvl:1s,id:'minecraft:efficiency'},{lvl:1s,id:'minecraft:unbreaking'}]},minecraft:diamond_shovel{Enchantments:[{lvl:2s,id:'minecraft:efficiency'},{lvl:1s,id:'minecraft:unbreaking'}]},minecraft:diamond_shovel{Enchantments:[{lvl:3s,id:'minecraft:efficiency'},{lvl:2s,id:'minecraft:unbreaking'}]},minecraft:diamond_shovel{Enchantments:[{lvl:4s,id:'minecraft:efficiency'},{lvl:2s,id:'minecraft:unbreaking'}]},minecraft:diamond_shovel{Enchantments:[{lvl:5s,id:'minecraft:efficiency'},{lvl:3s,id:'minecraft:unbreaking'}]}",
+      "sell5": "minecraft:diamond_axe{Enchantments:[{lvl:1s,id:'minecraft:efficiency'},{lvl:1s,id:'minecraft:fortune'},{lvl:1s,id:'minecraft:unbreaking'}]},minecraft:diamond_axe{Enchantments:[{lvl:2s,id:'minecraft:efficiency'},{lvl:1s,id:'minecraft:silk_touch'},{lvl:1s,id:'minecraft:unbreaking'}]},minecraft:diamond_axe{Enchantments:[{lvl:3s,id:'minecraft:efficiency'},{lvl:1s,id:'minecraft:fortune'},{lvl:2s,id:'minecraft:unbreaking'}]},minecraft:diamond_axe{Enchantments:[{lvl:4s,id:'minecraft:efficiency'},{lvl:1s,id:'minecraft:silk_touch'},{lvl:2s,id:'minecraft:unbreaking'}]},minecraft:diamond_axe{Enchantments:[{lvl:5s,id:'minecraft:efficiency'},{lvl:1s,id:'minecraft:fortune'},{lvl:3s,id:'minecraft:unbreaking'}]}",
+      "sell6": "minecraft:diamond_pickaxe{Enchantments:[{lvl:1s,id:'minecraft:efficiency'},{lvl:1s,id:'minecraft:fortune'},{lvl:1s,id:'minecraft:unbreaking'},{lvl:1s,id:'minecraft:mending'}]},minecraft:diamond_pickaxe{Enchantments:[{lvl:2s,id:'minecraft:efficiency'},{lvl:1s,id:'minecraft:silk_touch'},{lvl:1s,id:'minecraft:unbreaking'},{lvl:1s,id:'minecraft:mending'}]},minecraft:diamond_pickaxe{Enchantments:[{lvl:3s,id:'minecraft:efficiency'},{lvl:2s,id:'minecraft:fortune'},{lvl:2s,id:'minecraft:unbreaking'},{lvl:1s,id:'minecraft:mending'}]},minecraft:diamond_pickaxe{Enchantments:[{lvl:4s,id:'minecraft:efficiency'},{lvl:1s,id:'minecraft:silk_touch'},{lvl:2s,id:'minecraft:unbreaking'},{lvl:1s,id:'minecraft:mending'}]},minecraft:diamond_pickaxe{Enchantments:[{lvl:5s,id:'minecraft:efficiency'},{lvl:3s,id:'minecraft:fortune'},{lvl:3s,id:'minecraft:unbreaking'},{lvl:1s,id:'minecraft:mending'}]}",
+      "rec": "Receive",
+      "rec1": "minecraft:coal",
+      "rec2": "minecraft:iron_ingot"
+    }
+  ]
+}

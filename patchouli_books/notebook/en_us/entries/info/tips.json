@@ -1,0 +1,30 @@
+{
+  "name": "Other Tips §2§l*",
+  "icon": "minecraft:paper",
+  "category": "patchouli:info",
+  "read_by_default": true,
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "title_text",
+      "title": "Other Tips",
+      "text": "$(br)Some of the information that may be of interest is listed here"
+    },
+    {
+      "type": "p_text",
+      "text": "$(2)$(l)*/$ Hold Shift and click on the purse to store all coins from your inventory. Except for the money bag, which still needs to be held and right-clicked to store them manually.$(br2)$(2)$(l)*/$ Holding Shift during villager trading will automatically prepare the items for the next trade (same as pressing space).$(br2)$(2)$(l)*/$ Hovering over trades with the mouse lets you see the times traded and the allowed trade count."
+    },
+    {
+      "type": "p_text",
+      "text": "$(li)Click on the recipe book, EMI will switch to craftable items. In this case, Left Click items works the same as recipe book: place the recipe onto the crafting grid, Shift+Left Click to place all. Press A to favorite items to the left.$(br)$(li)Carrying more than 3 backpacks will cause slowness.$(br)$(li)Backpacks can be worn in the back slot, so it doesn't block chestplate wearing."
+    },
+    {
+      "type": "p_text",
+      "text": "$(li)Prevent placing the last torch: Client Tweaks mod settings → Tweaks → Do Not Use Last Torch$(br)$(li)When a backpack has Stack Upgrade installed and the stack size has exceeded the vanilla limit, it is recommended to still use \"Shift+Left Click\" to transfer items, rather than \"Ctrl+Left Click\"."
+    },
+    {
+      "type": "p_text",
+      "text": "$(li)If you are more accustomed to using buttons and less comfortable with the key of item transfers, click Inventory Profiles Next settings in the upper left corner of any inventory interface → Gui settings, and enable the buttons you need."
+    }
+  ]
+}

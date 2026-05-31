@@ -1,0 +1,25 @@
+{
+  "name": "Weaponsmith §2§l*",
+  "icon": "minecraft:grindstone",
+  "category": "patchouli:trade",
+  "advancement": "minecraft:adventure/trade",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "entity",
+      "entity": "minecraft:villager{VillagerData:{profession:'minecraft:weaponsmith',level:5,type:'minecraft:plains'}}",
+      "rotate": false,
+      "text": "\"Hmm?\""
+    },
+    {
+      "type": "trade",
+      "sell": "Sell",
+      "sell1": "spartanweaponry:silver_saber,spartanweaponry:silver_warhammer,spartanweaponry:silver_lance,spartanweaponry:silver_flanged_mace,spartanweaponry:silver_scythe,spartanweaponry:silver_longsword,spartanweaponry:silver_rapier,spartanweaponry:silver_greatsword,spartanweaponry:silver_battle_hammer,spartanweaponry:silver_halberd,spartanweaponry:silver_battleaxe,spartanweaponry:silver_dagger,spartanweaponry:silver_spear,spartanweaponry:silver_pike,spartanweaponry:silver_throwing_knife,spartanweaponry:silver_javelin,spartanweaponry:silver_boomerang,spartanweaponry:silver_parrying_dagger,spartanweaponry:silver_parrying_dagger,spartanweaponry:silver_katana,spartanweaponry:silver_tomahawk,spartanweaponry:silver_glaive,spartanweaponry:silver_quarterstaff",
+      "sell2": "spartanweaponry:diamond_saber,spartanweaponry:diamond_warhammer,spartanweaponry:diamond_lance,spartanweaponry:diamond_flanged_mace,spartanweaponry:diamond_scythe,spartanweaponry:diamond_longsword,spartanweaponry:diamond_rapier,spartanweaponry:diamond_greatsword,spartanweaponry:diamond_battle_hammer,spartanweaponry:diamond_halberd,spartanweaponry:diamond_battleaxe,spartanweaponry:diamond_dagger,spartanweaponry:diamond_spear,spartanweaponry:diamond_pike,spartanweaponry:diamond_throwing_knife,spartanweaponry:diamond_javelin,spartanweaponry:diamond_boomerang,spartanweaponry:diamond_parrying_dagger,spartanweaponry:diamond_parrying_dagger,spartanweaponry:diamond_katana,spartanweaponry:diamond_tomahawk,spartanweaponry:diamond_glaive,spartanweaponry:diamond_quarterstaff",
+      "sell3": "quark:gunpowder_sack",
+      "sell4": "minecraft:enchanted_book{StoredEnchantments:[{lvl:5s,id:'minecraft:bane_of_arthropods'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:2s,id:'minecraft:fire_aspect'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:2s,id:'minecraft:knockback'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:3s,id:'minecraft:looting'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:5s,id:'minecraft:sharpness'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:5s,id:'minecraft:smite'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:3s,id:'minecraft:sweeping'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:3s,id:'spartanweaponry:propel'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:5s,id:'spartanweaponry:razors_edge'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:1s,id:'spartanweaponry:incendiary'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:3s,id:'spartanweaponry:lucky_throw'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:1s,id:'spartanweaponry:hydrodynamic'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:2s,id:'spartanweaponry:supercharge'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:2s,id:'spartanweaponry:expanse'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:3s,id:'spartanweaponry:sharpshooter'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:4s,id:'spartanweaponry:collectorang'}]}",
+      "sell5": "tacz:gun_smith_table",
+      "sell6": "tacz:ammo{AmmoId:'tacz:762x39'},tacz:ammo{AmmoId:'tacz:45acp'},tacz:ammo{AmmoId:'tacz:9mm'},tacz:ammo{AmmoId:'tacz:12g'},tacz:ammo{AmmoId:'tacz:308'},tacz:ammo{AmmoId:'tacz:50ae'},tacz:ammo{AmmoId:'tacz:357mag'},tacz:ammo{AmmoId:'tacz:rpg_rocket'},tacz:ammo{AmmoId:'tacz:50bmg'},tacz:ammo{AmmoId:'tacz:40mm'},tacz:ammo{AmmoId:'tacz:338'},tacz:ammo{AmmoId:'tacz:556x45'},tacz:ammo{AmmoId:'tacz:30_06'},tacz:ammo{AmmoId:'tacz:762x54'},tacz:ammo{AmmoId:'tacz:68x51fury'},tacz:ammo{AmmoId:'tacz:58x42'},tacz:ammo{AmmoId:'tacz:762x25'},tacz:ammo{AmmoId:'tacz:57x28'},tacz:ammo{AmmoId:'tacz:46x30'}"
+    }
+  ]
+}

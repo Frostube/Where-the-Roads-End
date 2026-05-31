@@ -1,0 +1,29 @@
+{
+  "name": "图书管理员",
+  "icon": "minecraft:lectern",
+  "category": "patchouli:trade",
+  "advancement": "minecraft:adventure/trade",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "entity",
+      "entity": "minecraft:villager{VillagerData:{profession:'minecraft:librarian',level:5,type:'minecraft:plains'}}",
+      "rotate": false,
+      "text": "枪械无法附魔，但装备可以$(br)“要经验？牧师那边...咳”"
+    },
+    {
+      "type": "trade",
+      "sell": "出售",
+      "sell1": "minecraft:enchanted_book{StoredEnchantments:[{}]}",
+      "sell2": "minecraft:bookshelf",
+      "sell3": "minecraft:lantern,minecraft:glass",
+      "sell4": "minecraft:writable_book,minecraft:compass,minecraft:clock",
+      "sell5": "minecraft:name_tag",
+      "sell6": "quark:ancient_tome{StoredEnchantments: [{lvl: 4s, id: 'minecraft:feather_falling'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 3s, id: 'minecraft:thorns'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 5s, id: 'minecraft:sharpness'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 5s, id: 'minecraft:smite'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 5s, id: 'minecraft:bane_of_arthropods'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 2s, id: 'minecraft:knockback'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 2s, id: 'minecraft:fire_aspect'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 3s, id: 'minecraft:looting'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 3s, id: 'minecraft:sweeping'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 5s, id: 'minecraft:efficiency'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 3s, id: 'minecraft:unbreaking'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 3s, id: 'minecraft:fortune'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 5s, id: 'minecraft:power'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 2s, id: 'minecraft:punch'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 3s, id: 'minecraft:luck_of_the_sea'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 3s, id: 'minecraft:lure'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 3s, id: 'minecraft:loyalty'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 5s, id: 'minecraft:impaling'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 3s, id: 'minecraft:riptide'}]},quark:ancient_tome{StoredEnchantments: [{lvl: 4s, id: 'minecraft:piercing'}]}",
+      "rec": "回收",
+      "rec1": "minecraft:paper",
+      "rec2": "minecraft:book",
+      "rec3": "minecraft:ink_sac"
+    }
+  ]
+}

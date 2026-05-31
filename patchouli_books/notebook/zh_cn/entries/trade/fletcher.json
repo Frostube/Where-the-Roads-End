@@ -1,0 +1,28 @@
+{
+  "name": "制箭师",
+  "icon": "minecraft:fletching_table",
+  "category": "patchouli:trade",
+  "advancement": "minecraft:adventure/trade",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "entity",
+      "entity": "minecraft:villager{VillagerData:{profession:'minecraft:fletcher',level:5,type:'minecraft:plains'}}",
+      "rotate": false,
+      "text": "远程力量一把手"
+    },
+    {
+      "type": "trade",
+      "sell": "出售",
+      "sell1": "minecraft:flint,minecraft:arrow",
+      "sell2": "spartanweaponry:aluminum_longbow,spartanweaponry:steel_longbow,spartanweaponry:aluminum_heavy_crossbow,spartanweaponry:steel_heavy_crossbow",
+      "sell3": "minecraft:bow{Enchantments:[{lvl:1s,id:'minecraft:power'},{lvl:1s,id:'minecraft:unbreaking'}]},minecraft:bow{Enchantments:[{lvl:2s,id:'minecraft:power'},{lvl:2s,id:'minecraft:unbreaking'}]},minecraft:bow{Enchantments:[{lvl:3s,id:'minecraft:power'},{lvl:2s,id:'minecraft:unbreaking'}]}",
+      "sell4": "minecraft:tipped_arrow{Potion:'minecraft:regeneration'},minecraft:tipped_arrow{Potion:'minecraft:long_regeneration'},minecraft:tipped_arrow{Potion:'minecraft:strong_regeneration'},minecraft:tipped_arrow{Potion:'minecraft:healing'},minecraft:tipped_arrow{Potion:'minecraft:strong_healing'}",
+      "sell5": "spartanweaponry:tipped_diamond_arrow{Potion:'minecraft:slowness'},spartanweaponry:tipped_diamond_arrow{Potion:'minecraft:strong_slowness'},spartanweaponry:tipped_diamond_arrow{Potion:'minecraft:long_weakness'},spartanweaponry:tipped_diamond_arrow{Potion:'minecraft:regeneration'},spartanweaponry:tipped_diamond_arrow{Potion:'minecraft:long_regeneration'},spartanweaponry:tipped_diamond_arrow{Potion:'minecraft:strong_regeneration'},spartanweaponry:tipped_diamond_arrow{Potion:'minecraft:healing'},spartanweaponry:tipped_diamond_arrow{Potion:'minecraft:strong_healing'}",
+      "sell6": "spartanweaponry:tipped_netherite_arrow{Potion:'minecraft:slowness'},spartanweaponry:tipped_netherite_arrow{Potion:'minecraft:strong_slowness'},spartanweaponry:tipped_netherite_arrow{Potion:'minecraft:long_weakness'},spartanweaponry:tipped_netherite_arrow{Potion:'minecraft:regeneration'},spartanweaponry:tipped_netherite_arrow{Potion:'minecraft:long_regeneration'},spartanweaponry:tipped_netherite_arrow{Potion:'minecraft:strong_regeneration'},spartanweaponry:tipped_netherite_arrow{Potion:'minecraft:healing'},spartanweaponry:tipped_netherite_arrow{Potion:'minecraft:strong_healing'}",
+      "rec": "回收",
+      "rec1": "minecraft:stick",
+      "rec2": "minecraft:string"
+    }
+  ]
+}

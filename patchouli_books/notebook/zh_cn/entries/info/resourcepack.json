@@ -1,0 +1,18 @@
+{
+  "name": "材质资源§2§l*",
+  "icon": "biomesoplenty:origin_grass_block",
+  "category": "patchouli:info",
+  "read_by_default": true,
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "title_text",
+      "title": "旧版材质",
+      "text": "共3项：$(p) Quark Programmer Art$(br) [1.20.1]ProgrammerArtFix-rv2$(br) Programmer Art$(p)$(2)$(l)*/$ 受整合包安装影响可能出现一些资源包不会加载的问题，首次进入游戏请检查并$(l)确保以上资源包加载并按照以上顺序排列/$"
+    },
+    {
+      "type": "p_text",
+      "text": "$(li)为了还原MC 1.12时期以及使世界更符合情境，使用了旧版资源包$(br)$(li)若无法接受下界岩等材质可以自行关闭这些资源包"
+    }
+  ]
+}

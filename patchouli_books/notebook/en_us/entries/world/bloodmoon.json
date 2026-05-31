@@ -1,0 +1,19 @@
+{
+  "name": "Blood Moon",
+  "icon": "biomesoplenty:eyebulb",
+  "category": "patchouli:world",
+  "read_by_default": true,
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "entity",
+      "entity": "minecraft:zombie",
+      "rotate": false
+    },
+    {
+      "type": "title_text",
+      "title": "Blood Moon Message",
+      "text": "$(br)$(4)$(l)\"This is going to be a terrible night...\"/$$(p)$(li)A $(c)Blood Moon/$ occurs about every 10 days, the first one will occurs on about 20th day. Sleeping will not able to skip the night during it.$(br)$(li)On other nights, all players must be sleeping to skip the night.$(br)$(li)If Vignette is turned off, the red border effect will not be shown."
+    }
+  ]
+}

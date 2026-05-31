@@ -1,0 +1,29 @@
+{
+  "name": "石匠§2§l*",
+  "icon": "minecraft:stonecutter",
+  "category": "patchouli:trade",
+  "advancement": "minecraft:adventure/trade",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "entity",
+      "entity": "minecraft:villager{VillagerData:{profession:'minecraft:mason',level:5,type:'minecraft:plains'}}",
+      "rotate": false,
+      "text": "曾经卖下界石英块的实力都不一般"
+    },
+    {
+      "type": "trade",
+      "sell": "出售",
+      "sell1": "minecraft:copper_ingot",
+      "sell2": "minecraft:iron_ingot",
+      "sell3": "minecraft:gold_ingot",
+      "sell4": "minecraft:amethyst_shard",
+      "sell5": "minecraft:diamond",
+      "sell6": "minecraft:netherite_scrap",
+      "rec": "回收",
+      "rec1": "minecraft:cobblestone",
+      "rec2": "minecraft:emerald",
+      "rec3": "minecraft:obsidian"
+    }
+  ]
+}

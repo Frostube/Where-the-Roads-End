@@ -1,0 +1,118 @@
+{
+  "customizedAnimations": [
+    {
+      "identifier": 0,
+      "Name": "默认 (Default)",
+      "Animation Curve": 0,
+      "Despawn Speed": 0.5,
+      "Type": 0,
+      "Particle Spawn": []
+    },
+    {
+      "identifier": 5,
+      "Name": "末影 (Portal)",
+      "Animation Curve": 0,
+      "Despawn Speed": 0.0,
+      "Type": 0,
+      "Particle Spawn": [
+        {
+          "Type": "minecraft:reverse_portal",
+          "Amount": 16,
+          "Spread Radius": 0.8,
+          "Spawn Chance": 1.0,
+          "Velocity X": 0.0,
+          "Velocity Y": 0.0,
+          "Velocity Z": 0.0,
+          "Sound Volume": 0.1,
+          "Sound": "minecraft:block.portal.ambient"
+        }
+      ]
+    },
+    {
+      "identifier": 6,
+      "Name": "水花 (Splash)",
+      "Animation Curve": 0,
+      "Despawn Speed": 0.0,
+      "Type": 0,
+      "Particle Spawn": [
+        {
+          "Type": "minecraft:splash",
+          "Amount": 16,
+          "Spread Radius": 0.7,
+          "Spawn Chance": 1.0,
+          "Velocity X": 0.0,
+          "Velocity Y": 0.0,
+          "Velocity Z": 0.0,
+          "Sound Volume": 0.1,
+          "Sound": "minecraft:entity.dolphin.splash"
+        }
+      ]
+    },
+    {
+      "identifier": 1,
+      "Name": "淡出 (Vanish)",
+      "Animation Curve": 2,
+      "Despawn Speed": 0.5,
+      "Type": 1,
+      "Particle Spawn": []
+    },
+    {
+      "identifier": 3,
+      "Name": "爆裂 (Explosion)",
+      "Animation Curve": 1,
+      "Despawn Speed": 0.5,
+      "Type": 2,
+      "Particle Spawn": [
+        {
+          "Type": "minecraft:lava",
+          "Amount": 4,
+          "Spread Radius": 0.5,
+          "Spawn Chance": 1.0,
+          "Velocity X": 0.0,
+          "Velocity Y": 0.0,
+          "Velocity Z": 0.0,
+          "Sound Volume": 0.1,
+          "Sound": "minecraft:block.lava.extinguish"
+        },
+        {
+          "Type": "minecraft:poof",
+          "Amount": 7,
+          "Spread Radius": 0.5,
+          "Spawn Chance": 1.0,
+          "Velocity X": 0.0,
+          "Velocity Y": 0.0,
+          "Velocity Z": 0.0,
+          "Sound Volume": 0.1
+        }
+      ]
+    },
+    {
+      "identifier": 4,
+      "Name": "噗 (Poof)",
+      "Animation Curve": 0,
+      "Despawn Speed": 0.0,
+      "Type": 0,
+      "Particle Spawn": [
+        {
+          "Type": "minecraft:poof",
+          "Amount": 6,
+          "Spread Radius": 0.8,
+          "Spawn Chance": 1.0,
+          "Velocity X": 0.0,
+          "Velocity Y": 0.0,
+          "Velocity Z": 0.0,
+          "Sound Volume": 0.2,
+          "Sound": "minecraft:entity.fox.sniff"
+        }
+      ]
+    },
+    {
+      "identifier": 2,
+      "Name": "弹跳 (Bounce)",
+      "Animation Curve": 3,
+      "Despawn Speed": 0.6,
+      "Type": 0,
+      "Particle Spawn": []
+    }
+  ]
+}

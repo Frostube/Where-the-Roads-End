@@ -1,0 +1,33 @@
+{
+  "name": "操作配置",
+  "icon": "minecraft:tripwire_hook",
+  "category": "patchouli:info",
+  "read_by_default": true,
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "p_text",
+      "text": "此处列出一些常用且重要的按键及信息$(p)注：$(li)“KP_”表示小键盘$(li)此处列出为整合包推荐默认按键，请按喜好自行在游戏设置更改"
+    },
+    {
+      "type": "title_text",
+      "title": "地图",
+      "text": "$(li)$(l)M/$：查看世界地图（大地图）$(li)$(l)+/-/$：缩放小地图$(li)$(l)P/$：放大小地图$(li)$(l)KP_+/$：在当前位置新建路径点$(li)$(l)]/$：世界地图设置（右方括号）$(li)$(l)Y/$：小地图设置"
+    },
+    {
+      "type": "title_text",
+      "title": "物品快捷转移",
+      "text": "$(br)在箱子或背包等界面中：$(li)$(l)滚轮上/下/$：向上/下转移单个物品（在物品栏向上滚动进入容器，在容器向下滚动进入物品栏，反之亦然）$(li)$(l)Ctrl+左键/$：转移所有相同物品$(li)$(l)Ctrl+Shift+左键/$：转移所有物品"
+    },
+    {
+      "type": "title_text",
+      "title": "枪械",
+      "text": "$(li)$(l)R/$：换弹$(li)$(l)Z/$：配件改装$(li)$(l)G/$：改变倍镜缩放$(li)$(l)H/$：检视"
+    },
+    {
+      "type": "title_text",
+      "title": "其他按键",
+      "text": "$(li)$(l)F11/$：全屏$(li)$(l)V/$：切换视角$(li)$(l)C/$：缩放$(li)$(l)~/$：连锁采集$(li)$(l)F4/$：切换连锁模式$(li)$(l)I/$：打开已装备箭袋$(li)$(l)B/$：打开背包$(li)$(l)中键/$：整理鼠标指向区域物品"
+    }
+  ]
+}

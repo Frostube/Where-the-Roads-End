@@ -1,0 +1,30 @@
+{
+  "name": "额外事项§2§l*",
+  "icon": "minecraft:paper",
+  "category": "patchouli:info",
+  "read_by_default": true,
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "title_text",
+      "title": "额外事项",
+      "text": "$(br)此处列出一些可能会被关注的信息"
+    },
+    {
+      "type": "p_text",
+      "text": "$(br)$(2)$(l)*/$ 按住Shift点击钱包可以将身上所有钱币存至钱包，钱袋除外，仍需要拿在手上右键存入$(br2)$(2)$(l)*/$ 按住Shift进行的村民交易会自动准备下一次交易物品（与空格作用相同）$(br2)$(2)$(l)*/$ 鼠标指向交易项可以查看已交易次数和允许交易次数"
+    },
+    {
+      "type": "p_text",
+      "text": "$(li)点击配方书，右侧物品栏将切换为可合成物品，此界面左键点击物品与原版配方书一致：将配方摆放至合成面板，Shift+左键摆放所有，按 A 将物品收藏至左侧$(br)$(li)身上携带超过3个背包会导致缓慢$(br)$(li)背包可以背在背饰槽位，从而不影响胸甲穿戴"
+    },
+    {
+      "type": "p_text",
+      "text": "$(li)防止放置最后一支火把：Client Tweaks模组设置 → Tweaks → Do Not Use Last Torch$(br)$(li)背包安装堆叠升级且堆叠数量已超原版限制时，建议依然使用“Shift+左键”转移物品，而非“Ctrl+左键”"
+    },
+    {
+      "type": "p_text",
+      "text": "$(li)若更习惯于使用按钮，不习惯中键整理和快捷键转移物品，在任意物品栏界面点击屏幕左上角Inventory Profiles Next设置 → Gui设置，自行开启需要的按钮"
+    }
+  ]
+}

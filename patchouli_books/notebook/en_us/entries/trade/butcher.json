@@ -1,0 +1,29 @@
+{
+  "name": "Butcher",
+  "icon": "minecraft:smoker",
+  "category": "patchouli:trade",
+  "advancement": "minecraft:adventure/trade",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "entity",
+      "entity": "minecraft:villager{VillagerData:{profession:'minecraft:butcher',level:5,type:'minecraft:plains'}}",
+      "rotate": false,
+      "text": "\"Lucky for us, these critters ain't gone extinct yet...\""
+    },
+    {
+      "type": "trade",
+      "sell": "Sell",
+      "sell1": "minecraft:rabbit_stew",
+      "sell2": "minecraft:cooked_rabbit,minecraft:cooked_chicken",
+      "sell3": "minecraft:campfire",
+      "sell4": "minecraft:cooked_beef,minecraft:cooked_mutton",
+      "sell5": "minecraft:cooked_porkchop",
+      "sell6": "minecraft:diamond_axe",
+      "rec": "Receive",
+      "rec1": "minecraft:chicken,minecraft:rabbit,minecraft:porkchop",
+      "rec2": "minecraft:coal,minecraft:mutton,minecraft:beef",
+      "rec3": "minecraft:dried_kelp_block,minecraft:sweet_berries"
+    }
+  ]
+}

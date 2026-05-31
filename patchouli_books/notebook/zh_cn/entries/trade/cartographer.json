@@ -1,0 +1,27 @@
+{
+  "name": "制图师",
+  "icon": "minecraft:cartography_table",
+  "category": "patchouli:trade",
+  "advancement": "minecraft:adventure/trade",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "entity",
+      "entity": "minecraft:villager{VillagerData:{profession:'minecraft:cartographer',level:5,type:'minecraft:plains'}}",
+      "rotate": false,
+      "text": "不过地图似乎并不怎么需要"
+    },
+    {
+      "type": "trade",
+      "sell": "出售",
+      "sell1": "quark:pathfinders_quill{targetBiome:'minecraft:snowy_plains',targetBiomeColor:8381695,targetBiomeUnderground:0b},quark:pathfinders_quill{targetBiome:'minecraft:windswept_hills',targetBiomeColor:9079434,targetBiomeUnderground:0b},quark:pathfinders_quill{targetBiome:'minecraft:dark_forest',targetBiomeColor:22794,targetBiomeUnderground:0b},quark:pathfinders_quill{targetBiome:'minecraft:desert',targetBiomeColor:13416782,targetBiomeUnderground:0b},quark:pathfinders_quill{targetBiome:'minecraft:savanna',targetBiomeColor:10200418,targetBiomeUnderground:0b},quark:pathfinders_quill{targetBiome:'minecraft:swamp',targetBiomeColor:2242319,targetBiomeUnderground:0b},quark:pathfinders_quill{targetBiome:'minecraft:mangrove_swamp',targetBiomeColor:2242319,targetBiomeUnderground:0b},quark:pathfinders_quill{targetBiome:'minecraft:old_growth_pine_taiga',targetBiomeColor:5980703,targetBiomeUnderground:0b}",
+      "sell2": "minecraft:white_banner,minecraft:light_gray_banner,minecraft:gray_banner,minecraft:black_banner,minecraft:brown_banner,minecraft:red_banner,minecraft:orange_banner,minecraft:yellow_banner,minecraft:lime_banner,minecraft:green_banner,minecraft:cyan_banner,minecraft:light_blue_banner,minecraft:blue_banner,minecraft:purple_banner,minecraft:magenta_banner,minecraft:pink_banner",
+      "sell3": "minecraft:flower_banner_pattern,minecraft:globe_banner_pattern,minecraft:mojang_banner_pattern",
+      "sell4": "quark:pathfinders_quill{targetBiome:'minecraft:flower_forest',targetBiomeColor:13518562,targetBiomeUnderground:0b},quark:pathfinders_quill{targetBiome:'minecraft:jungle',targetBiomeColor:2274816,targetBiomeUnderground:0b},quark:pathfinders_quill{targetBiome:'minecraft:bamboo_jungle',targetBiomeColor:4055575,targetBiomeUnderground:0b},quark:pathfinders_quill{targetBiome:'minecraft:badlands',targetBiomeColor:13008674,targetBiomeUnderground:0b},quark:pathfinders_quill{targetBiome:'minecraft:mushroom_fields',targetBiomeColor:5063283,targetBiomeUnderground:0b},quark:pathfinders_quill{targetBiome:'minecraft:ice_spikes',targetBiomeColor:2015433,targetBiomeUnderground:0b},quark:pathfinders_quill{targetBiome:'minecraft:cherry_grove',targetBiomeColor:15313384,targetBiomeUnderground:0b}",
+      "rec": "回收",
+      "rec1": "minecraft:paper",
+      "rec2": "minecraft:glass_pane",
+      "rec3": "minecraft:compass"
+    }
+  ]
+}

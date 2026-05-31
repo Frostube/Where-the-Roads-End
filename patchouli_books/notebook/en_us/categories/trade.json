@@ -1,0 +1,6 @@
+{
+  "name": "Goods from villager",
+  "description": "A brief record of the items newly sold or worth reminding by the villagers, and some recycled items",
+  "icon": "minecraft:textures/mob_effect/hero_of_the_village.png",
+  "sortnum": 2
+}

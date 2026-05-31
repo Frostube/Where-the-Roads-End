@@ -1,0 +1,6 @@
+{
+  "name": "村民好货",
+  "description": "简要记录村民们新卖或值得提醒的物品，以及一些回收的物品",
+  "icon": "minecraft:textures/mob_effect/hero_of_the_village.png",
+  "sortnum": 2
+}

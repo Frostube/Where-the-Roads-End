@@ -1,0 +1,70 @@
+{
+    "globalBookmarks": {
+        "armorer": [],
+        "butcher": [],
+        "cartographer": [],
+        "cleric": [],
+        "farmer": [],
+        "fisherman": [],
+        "fletcher": [],
+        "leatherworker": [],
+        "librarian": [],
+        "mason": [],
+        "shepherd": [],
+        "toolsmith": [],
+        "weaponsmith": [],
+        "nitwit": [],
+        "none": [],
+        "arms_dealer": [
+            {
+                "resultItem": "minecraft:gunpowder",
+                "priceItem1": "numismatic-overhaul:bronze_coin"
+            },
+            {
+                "resultItem": "minecraft:amethyst_shard",
+                "priceItem1": "numismatic-overhaul:silver_coin"
+            },
+            {
+                "resultItem": "tacz:ammo",
+                "priceItem1": "numismatic-overhaul:bronze_coin",
+                "resultItemNBT": "{AmmoId:\"tacz:50ae\"}"
+            }
+        ]
+    },
+    "globalBookmarks1": {
+        "armorer": [],
+        "butcher": [],
+        "cartographer": [],
+        "cleric": [],
+        "farmer": [],
+        "fisherman": [],
+        "fletcher": [],
+        "leatherworker": [],
+        "librarian": [],
+        "mason": [],
+        "shepherd": [],
+        "toolsmith": [],
+        "weaponsmith": [],
+        "nitwit": [],
+        "none": [],
+        "arms_dealer": []
+    },
+    "globalBookmarks2": {
+        "armorer": [],
+        "butcher": [],
+        "cartographer": [],
+        "cleric": [],
+        "farmer": [],
+        "fisherman": [],
+        "fletcher": [],
+        "leatherworker": [],
+        "librarian": [],
+        "mason": [],
+        "shepherd": [],
+        "toolsmith": [],
+        "weaponsmith": [],
+        "nitwit": [],
+        "none": [],
+        "arms_dealer": []
+    }
+}

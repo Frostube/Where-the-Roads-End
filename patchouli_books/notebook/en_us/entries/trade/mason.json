@@ -1,0 +1,29 @@
+{
+  "name": "Mason §2§l*",
+  "icon": "minecraft:stonecutter",
+  "category": "patchouli:trade",
+  "advancement": "minecraft:adventure/trade",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "entity",
+      "entity": "minecraft:villager{VillagerData:{profession:'minecraft:mason',level:5,type:'minecraft:plains'}}",
+      "rotate": false,
+      "text": "Those who sold Quartz Blocks down to nether are obviously quite extraordinary"
+    },
+    {
+      "type": "trade",
+      "sell": "Sell",
+      "sell1": "minecraft:copper_ingot",
+      "sell2": "minecraft:iron_ingot",
+      "sell3": "minecraft:gold_ingot",
+      "sell4": "minecraft:amethyst_shard",
+      "sell5": "minecraft:diamond",
+      "sell6": "minecraft:netherite_scrap",
+      "rec": "Receive",
+      "rec1": "minecraft:cobblestone",
+      "rec2": "minecraft:emerald",
+      "rec3": "minecraft:obsidian"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "components": [
+    {
+      "type": "patchouli:header",
+      "text": "#sell",
+      "y": -1,
+      "x": -1
+    },
+    {
+      "type": "patchouli:item",
+      "x": 10,
+      "y": 20,
+      "item": "#sell1",
+      "framed": true
+    },
+    {
+      "type": "patchouli:item",
+      "x": 50,
+      "y": 20,
+      "item": "#sell2",
+      "framed": true
+    },
+    {
+      "type": "patchouli:item",
+      "x": 90,
+      "y": 20,
+      "item": "#sell3",
+      "framed": true
+    },
+    {
+      "type": "patchouli:item",
+      "x": 10,
+      "y": 55,
+      "item": "#sell4",
+      "framed": true
+    },
+    {
+      "type": "patchouli:item",
+      "x": 50,
+      "y": 55,
+      "item": "#sell5",
+      "framed": true
+    },
+    {
+      "type": "patchouli:item",
+      "x": 90,
+      "y": 55,
+      "item": "#sell6",
+      "framed": true
+    },
+    {
+      "type": "patchouli:header",
+      "text": "#rec",
+      "y": 85,
+      "x": -1
+    },
+    {
+      "type": "patchouli:item",
+      "x": 10,
+      "y": 105,
+      "item": "#rec1",
+      "framed": true
+    },
+    {
+      "type": "patchouli:item",
+      "x": 50,
+      "y": 105,
+      "item": "#rec2",
+      "framed": true
+    },
+    {
+      "type": "patchouli:item",
+      "x": 90,
+      "y": 105,
+      "item": "#rec3",
+      "framed": true
+    }
+  ]
+}

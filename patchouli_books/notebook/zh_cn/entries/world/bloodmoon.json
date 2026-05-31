@@ -1,0 +1,19 @@
+{
+  "name": "血月",
+  "icon": "biomesoplenty:eyebulb",
+  "category": "patchouli:world",
+  "read_by_default": true,
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "entity",
+      "entity": "minecraft:zombie",
+      "rotate": false
+    },
+    {
+      "type": "title_text",
+      "title": "血月提示",
+      "text": "$(br)$(4)$(l)“这将是一个可怕的夜晚…”/$$(p)$(li)约每 10 天会发生一次$(c)血月/$，第一次约在 20 天，在此期间入睡无法跳过夜晚$(br)$(li)非血月期间跳过夜晚需要所有玩家睡觉$(br)$(li)若关闭晕影将会影响红色边框效果显示"
+    }
+  ]
+}

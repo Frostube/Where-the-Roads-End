@@ -1,0 +1,13 @@
+{
+  "buckets": 120.0,
+  "bottles": 60.0,
+  "blocks": 240.0,
+  "ingots": 90.0,
+  "nuggets": 10.0,
+  "items": 50.0,
+  "creative": 30000.0,
+  "maxWeight": 90000.0,
+  "pocketWeight": 9000.0,
+  "realisticMode": false,
+  "overloadPenaltyStrength": 1.0
+}

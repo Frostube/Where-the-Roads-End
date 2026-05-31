@@ -1,0 +1,26 @@
+# Where the Roads End — version-control ONLY the hand-made customization.
+# This is a live Minecraft instance, so ignore everything at the root by default...
+/*
+
+# ...then re-include just the parts we track:
+!/.gitignore
+!/README.md
+!/mods-list.txt
+!/options.txt
+!/kubejs/
+!/config/
+!/defaultconfigs/
+!/datapacks/
+!/patchouli_books/
+
+# Safety: never commit these even if re-included above
+mods/
+saves/
+logs/
+crash-reports/
+shaderpacks/
+resourcepacks/
+*.log
+hs_err_*.log
+replay_*.log
+*-pls.txt

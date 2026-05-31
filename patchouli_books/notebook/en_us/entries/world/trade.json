@@ -1,0 +1,19 @@
+{
+  "name": "Village",
+  "icon": "minecraft:emerald",
+  "category": "patchouli:world",
+  "read_by_default": true,
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "entity",
+      "entity": "minecraft:villager",
+      "name": "Villager",
+      "rotate": false
+    },
+    {
+      "type": "p_text",
+      "text": "The villagers have joined the apocalypse reconstruction effort. They have supplies you need. Without them, you're like a gun without gunpowder...$(p)They have started $(l)selling/$ and $(l)recycling/$ things to help survivors, even things that shouldn't concern them...$(p)$(l)>>>/$ $(2)After trading, you can find more information in this book/$ $(l)<<</$"
+    }
+  ]
+}

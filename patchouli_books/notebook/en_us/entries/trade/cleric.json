@@ -1,0 +1,29 @@
+{
+  "name": "Cleric §2§l*",
+  "icon": "minecraft:brewing_stand",
+  "category": "patchouli:trade",
+  "advancement": "minecraft:adventure/trade",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "entity",
+      "entity": "minecraft:villager{VillagerData:{profession:'minecraft:cleric',level:5,type:'minecraft:plains'}}",
+      "rotate": false,
+      "text": "Where he got Dragon Breath remains an unsolved mystery to this day"
+    },
+    {
+      "type": "trade",
+      "sell": "Sell",
+      "sell1": "minecraft:spider_eye,minecraft:bone",
+      "sell2": "minecraft:redstone,minecraft:lapis_lazuli",
+      "sell3": "minecraft:ink_sac,minecraft:slime_ball",
+      "sell4": "minecraft:experience_bottle,minecraft:ender_pearl",
+      "sell5": "minecraft:splash_potion{Potion:'minecraft:long_night_vision'},minecraft:splash_potion{Potion:'minecraft:long_invisibility'},minecraft:splash_potion{Potion:'minecraft:long_leaping'},minecraft:splash_potion{Potion:'minecraft:strong_leaping'},minecraft:splash_potion{Potion:'minecraft:long_fire_resistance'},minecraft:splash_potion{Potion:'minecraft:long_swiftness'},minecraft:splash_potion{Potion:'minecraft:strong_swiftness'},minecraft:splash_potion{Potion:'minecraft:strong_slowness'},minecraft:splash_potion{Potion:'minecraft:long_turtle_master'},minecraft:splash_potion{Potion:'minecraft:strong_turtle_master'},minecraft:splash_potion{Potion:'minecraft:strong_healing'},minecraft:splash_potion{Potion:'minecraft:long_regeneration'},minecraft:splash_potion{Potion:'minecraft:strong_regeneration'},minecraft:splash_potion{Potion:'minecraft:long_strength'},minecraft:splash_potion{Potion:'minecraft:strong_strength'},minecraft:splash_potion{Potion:'quark:long_resilience'},minecraft:splash_potion{Potion:'minecraft:long_weakness'}",
+      "sell6": "minecraft:lingering_potion{Potion:'minecraft:long_night_vision'},minecraft:lingering_potion{Potion:'minecraft:long_invisibility'},minecraft:lingering_potion{Potion:'minecraft:long_leaping'},minecraft:lingering_potion{Potion:'minecraft:strong_leaping'},minecraft:lingering_potion{Potion:'minecraft:long_fire_resistance'},minecraft:lingering_potion{Potion:'minecraft:long_swiftness'},minecraft:lingering_potion{Potion:'minecraft:strong_swiftness'},minecraft:lingering_potion{Potion:'minecraft:strong_slowness'},minecraft:lingering_potion{Potion:'minecraft:long_turtle_master'},minecraft:lingering_potion{Potion:'minecraft:strong_turtle_master'},minecraft:lingering_potion{Potion:'minecraft:strong_healing'},minecraft:lingering_potion{Potion:'minecraft:long_regeneration'},minecraft:lingering_potion{Potion:'minecraft:strong_regeneration'},minecraft:lingering_potion{Potion:'minecraft:long_strength'},minecraft:lingering_potion{Potion:'minecraft:strong_strength'},minecraft:lingering_potion{Potion:'quark:long_resilience'},minecraft:lingering_potion{Potion:'minecraft:long_weakness'}",
+      "rec": "Receive",
+      "rec1": "minecraft:rotten_flesh",
+      "rec2": "minecraft:gold_ingot",
+      "rec3": "minecraft:nether_wart"
+    }
+  ]
+}

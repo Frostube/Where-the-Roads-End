@@ -1,0 +1,27 @@
+{
+    "net.minecraft.client.gui.screens.inventory.MerchantScreen": {
+        "buttonHints": {
+            "SETTINGS": {
+                "top": 3
+            },
+            "VILLAGER_DO_GLOBAL_TRADES": {
+                "horizontalOffset": 139,
+                "top": 1
+            },
+            "VILLAGER_DO_LOCAL_TRADES": {
+                "horizontalOffset": 139,
+                "top": 1
+            }
+        }
+    },
+    "net.minecraft.client.gui.screens.inventory.InventoryScreen": {
+        "buttonHints": {
+            "SETTINGS": {
+                "horizontalOffset": -2
+            },
+            "SORT": {
+                "horizontalOffset": 1
+            }
+        }
+    }
+}

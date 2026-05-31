@@ -1,0 +1,6 @@
+partial_buckets = true
+flow_speed = 1
+puddle_spread = 0.3
+#Set to 0 for vanilla behaviour
+farmland_water_consumption = 7
+

@@ -1,0 +1,33 @@
+{
+  "name": "Key configuration",
+  "icon": "minecraft:tripwire_hook",
+  "category": "patchouli:info",
+  "read_by_default": true,
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "p_text",
+      "text": "Here are some common and important keys and information $(p)Note:$(li)\"KP_\" indicates the numeric keypad$(li)The default keys listed here are default from the pack, you can customize them in the game settings as you prefer."
+    },
+    {
+      "type": "title_text",
+      "title": "Map",
+      "text": "$(li)$(l)M/$: Open World Map$(li)$(l)+/-/$: Zoom in/out on Minimap$(li)$(l)P/$: Enlarge Minimap$(li)$(l)KP_+/$: Quick Waypoint$(li)$(l)]/$: World Map settings (right bracket)$(li)$(l)Y/$: Minimap settings"
+    },
+    {
+      "type": "title_text",
+      "title": "Quick Item Transfer",
+      "text": "$(br)In inventory, chests or backpacks:$(li)$(l)Scroll up/down/$: Transfer a single item up/down (scroll up to move an item into the container, scroll down to move an item into inventory, and vice versa)$(li)$(l)Ctrl+Left Click/$: Transfer all the same items$(li)$(l)Ctrl+Shift+Left Click/$: Transfer all items"
+    },
+    {
+      "type": "title_text",
+      "title": "Gun",
+      "text": "$(li)$(l)R/$: Reload$(li)$(l)Z/$: Refit$(li)$(l)G/$: Change scope zoom$(li)$(l)H/$: Inspect"
+    },
+    {
+      "type": "title_text",
+      "title": "Other",
+      "text": "$(li)$(l)F11/$: Fullscreen$(li)$(l)V/$: Toggle Perspective$(li)$(l)C/$: Zoom$(li)$(l)~/$: Block Excavate$(li)$(l)F4/$: Toggle Excavate mode$(li)$(l)I/$: Access Equipped Quiver$(li)$(l)B/$: Open Backpack$(li)$(l)Middle Click/$: Sort items in the mouse-over area"
+    }
+  ]
+}

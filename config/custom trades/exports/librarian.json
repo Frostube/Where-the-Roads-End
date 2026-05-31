@@ -1,0 +1,471 @@
+{
+  "profession": "minecraft:librarian",
+  "removeOtherTrades": false,
+  "maxTrades": 2,
+  "trades": [
+    {
+      "offer": {
+        "itemKey": "numismatic-overhaul:bronze_coin",
+        "amount": 45,
+        "priceModifier": 0
+      },
+      "request": {
+        "itemKey": "minecraft:paper",
+        "amount": 20,
+        "priceModifier": 0
+      },
+      "tradeExp": 5,
+      "maxUses": 12,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 1
+    },
+    {
+      "offer": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 1,
+        "priceModifier": 0
+      },
+      "request": {
+        "itemKey": "minecraft:bookshelf",
+        "amount": 10,
+        "priceModifier": 0
+      },
+      "tradeExp": 6,
+      "maxUses": 10,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 1
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:bookshelf",
+        "amount": 1,
+        "priceModifier": 0
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 8,
+        "priceModifier": 0
+      },
+      "tradeExp": 8,
+      "maxUses": 10,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 1
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:enchanted_book",
+        "amount": 1,
+        "priceModifier": 0,
+        "advancedNBTData": "{StoredEnchantments:[{id:\"minecraft:bane_of_arthropods\",lvl:1s}]}"
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 5,
+        "priceModifier": 0
+      },
+      "additionalRequest": {
+        "itemKey": "minecraft:book",
+        "amount": 1,
+        "priceModifier": 0
+      },
+      "tradeExp": 10,
+      "maxUses": 8,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 1
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:enchanted_book",
+        "amount": 1,
+        "priceModifier": 0,
+        "advancedNBTData": "{StoredEnchantments:[{id:\"minecraft:sharpness\",lvl:3s}]}"
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 5,
+        "priceModifier": 0
+      },
+      "additionalRequest": {
+        "itemKey": "minecraft:book",
+        "amount": 1,
+        "priceModifier": 0
+      },
+      "tradeExp": 10,
+      "maxUses": 2,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 1
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:enchanted_book",
+        "amount": 1,
+        "priceModifier": 0,
+        "advancedNBTData": "{StoredEnchantments:[{id:\"minecraft:blast_protection\",lvl:3s}]}"
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 8,
+        "priceModifier": 0
+      },
+      "additionalRequest": {
+        "itemKey": "minecraft:book",
+        "amount": 1,
+        "priceModifier": 0
+      },
+      "tradeExp": 10,
+      "maxUses": 12,
+      "priceMultiplier": 1.25,
+      "demand": 0,
+      "tradeLevel": 1
+    },
+    {
+      "offer": {
+        "itemKey": "numismatic-overhaul:bronze_coin",
+        "amount": 60,
+        "priceModifier": 0
+      },
+      "request": {
+        "itemKey": "minecraft:book",
+        "amount": 3,
+        "priceModifier": 0
+      },
+      "tradeExp": 5,
+      "maxUses": 12,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 2
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:lantern",
+        "amount": 4,
+        "priceModifier": 0
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 7,
+        "priceModifier": 0
+      },
+      "tradeExp": 8,
+      "maxUses": 12,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 2
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:enchanted_book",
+        "amount": 1,
+        "priceModifier": 0,
+        "advancedNBTData": "{StoredEnchantments:[{id:\"minecraft:smite\",lvl:2s}]}"
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 6,
+        "priceModifier": 0
+      },
+      "additionalRequest": {
+        "itemKey": "minecraft:book",
+        "amount": 1,
+        "priceModifier": 0
+      },
+      "tradeExp": 10,
+      "maxUses": 8,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 2
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:enchanted_book",
+        "amount": 1,
+        "priceModifier": 0,
+        "advancedNBTData": "{StoredEnchantments:[{id:\"spartanweaponry:propel\",lvl:3s},{id:\"minecraft:flame\",lvl:1s}]}"
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 28,
+        "priceModifier": 0
+      },
+      "additionalRequest": {
+        "itemKey": "minecraft:book",
+        "amount": 1,
+        "priceModifier": 0
+      },
+      "tradeExp": 10,
+      "maxUses": 3,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 2
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:enchanted_book",
+        "amount": 1,
+        "priceModifier": 0,
+        "advancedNBTData": "{StoredEnchantments:[{id:\"minecraft:riptide\",lvl:2s}]}"
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 14,
+        "priceModifier": 0
+      },
+      "additionalRequest": {
+        "itemKey": "minecraft:book",
+        "amount": 1,
+        "priceModifier": 0
+      },
+      "tradeExp": 10,
+      "maxUses": 12,
+      "priceMultiplier": 1.1,
+      "demand": 0,
+      "tradeLevel": 2
+    },
+    {
+      "offer": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 2,
+        "priceModifier": 0
+      },
+      "request": {
+        "itemKey": "minecraft:ink_sac",
+        "amount": 4,
+        "priceModifier": 0
+      },
+      "tradeExp": 5,
+      "maxUses": 12,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 3
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:glass",
+        "amount": 10,
+        "priceModifier": 0
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 6,
+        "priceModifier": 0
+      },
+      "tradeExp": 5,
+      "maxUses": 12,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 3
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:enchanted_book",
+        "amount": 1,
+        "priceModifier": 0,
+        "advancedNBTData": "{StoredEnchantments:[{id:\"minecraft:unbreaking\",lvl:3s},{id:\"minecraft:sharpness\",lvl:3s},{id:\"minecraft:feather_falling\",lvl:4s}]}"
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 20,
+        "priceModifier": 0
+      },
+      "additionalRequest": {
+        "itemKey": "minecraft:book",
+        "amount": 1,
+        "priceModifier": 0
+      },
+      "tradeExp": 10,
+      "maxUses": 8,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 3
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:enchanted_book",
+        "amount": 1,
+        "priceModifier": 0,
+        "advancedNBTData": "{StoredEnchantments:[{id:\"minecraft:efficiency\",lvl:5s},{id:\"minecraft:sharpness\",lvl:5s},{id:\"spartanweaponry:collectorang\",lvl:4s}]}"
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 35,
+        "priceModifier": 0
+      },
+      "additionalRequest": {
+        "itemKey": "minecraft:book",
+        "amount": 1,
+        "priceModifier": 0
+      },
+      "tradeExp": 10,
+      "maxUses": 4,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 3
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:enchanted_book",
+        "amount": 1,
+        "priceModifier": 0,
+        "advancedNBTData": "{StoredEnchantments:[{id:\"minecraft:blast_protection\",lvl:1s}]}"
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 5,
+        "priceModifier": 0
+      },
+      "additionalRequest": {
+        "itemKey": "minecraft:book",
+        "amount": 1,
+        "priceModifier": 0
+      },
+      "tradeExp": 10,
+      "maxUses": 12,
+      "priceMultiplier": 1.0,
+      "demand": 0,
+      "tradeLevel": 3
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:writable_book",
+        "amount": 1,
+        "priceModifier": 0
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 9,
+        "priceModifier": 0
+      },
+      "tradeExp": 5,
+      "maxUses": 12,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 4
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:compass",
+        "amount": 1,
+        "priceModifier": 0
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 7,
+        "priceModifier": 0
+      },
+      "tradeExp": 8,
+      "maxUses": 12,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 4
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:clock",
+        "amount": 1,
+        "priceModifier": 0
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 9,
+        "priceModifier": 0
+      },
+      "tradeExp": 8,
+      "maxUses": 12,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 4
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:enchanted_book",
+        "amount": 1,
+        "priceModifier": 0,
+        "advancedNBTData": "{StoredEnchantments:[{id:\"minecraft:sharpness\",lvl:5s},{id:\"minecraft:efficiency\",lvl:5s},{id:\"minecraft:fire_aspect\",lvl:2s},{id:\"minecraft:mending\",lvl:1s}]}"
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 35,
+        "priceModifier": 0
+      },
+      "additionalRequest": {
+        "itemKey": "minecraft:book",
+        "amount": 1,
+        "priceModifier": 0
+      },
+      "tradeExp": 10,
+      "maxUses": 8,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 4
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:name_tag",
+        "amount": 2,
+        "priceModifier": 0
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 8,
+        "priceModifier": 0
+      },
+      "tradeExp": 8,
+      "maxUses": 12,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 5
+    },
+    {
+      "offer": {
+        "itemKey": "minecraft:enchanted_book",
+        "amount": 1,
+        "priceModifier": 0,
+        "advancedNBTData": "{StoredEnchantments:[{id:\"spartanshields:spikes\",lvl:3s},{id:\"minecraft:efficiency\",lvl:5s},{id:\"spartanweaponry:lucky_throw\",lvl:3s}]}"
+      },
+      "request": {
+        "itemKey": "numismatic-overhaul:silver_coin",
+        "amount": 40,
+        "priceModifier": 0
+      },
+      "additionalRequest": {
+        "itemKey": "minecraft:book",
+        "amount": 1,
+        "priceModifier": 0
+      },
+      "tradeExp": 15,
+      "maxUses": 5,
+      "priceMultiplier": 0.05,
+      "demand": 0,
+      "tradeLevel": 5
+    },
+    {
+      "offer": {
+        "itemKey": "quark:ancient_tome",
+        "amount": 1,
+        "priceModifier": 0,
+        "advancedNBTData": "{StoredEnchantments:[{id:\"minecraft:thorns\",lvl:3s}]}"
+      },
+      "request": {
+        "itemKey": "quark:ancient_tome",
+        "amount": 1,
+        "priceModifier": 0
+      },
+      "additionalRequest": {
+        "itemKey": "minecraft:enchanted_book",
+        "amount": 1,
+        "priceModifier": 0,
+        "advancedNBTData": "{StoredEnchantments:[{id:\"minecraft:thorns\",lvl:3s}]}"
+      },
+      "tradeExp": 3,
+      "maxUses": 3,
+      "priceMultiplier": 0.2,
+      "demand": 0,
+      "tradeLevel": 5
+    }
+  ]
+}

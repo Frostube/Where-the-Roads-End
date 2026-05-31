@@ -1,0 +1,20 @@
+{
+  "components": [
+    {
+      "type": "patchouli:header",
+      "text": "#title",
+      "x": -1,
+      "y": -1
+    },
+    {
+      "type": "patchouli:separator",
+      "y": -1
+    },
+    {
+      "type": "patchouli:text",
+      "text": "#text",
+      "x": 3,
+      "y": 18
+    }
+  ]
+}

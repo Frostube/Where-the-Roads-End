@@ -1,0 +1,27 @@
+{
+  "name": "Armorer §2§l*",
+  "icon": "minecraft:blast_furnace",
+  "category": "patchouli:trade",
+  "advancement": "minecraft:adventure/trade",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "entity",
+      "entity": "minecraft:villager{VillagerData:{profession:'minecraft:armorer',level:5,type:'minecraft:plains'}}",
+      "rotate": false,
+      "text": "No his good equipment, no these good things"
+    },
+    {
+      "type": "trade",
+      "sell": "Sell",
+      "sell1": "spartanshields:silver_tower_shield",
+      "sell2": "spartanshields:constantan_tower_shield,spartanshields:steel_tower_shield,spartanshields:platinum_tower_shield",
+      "sell3": "minecraft:bell",
+      "sell4": "minecraft:diamond_leggings{Enchantments:[{lvl:1s,id:'minecraft:protection'},{lvl:1s,id:'minecraft:unbreaking'}]},minecraft:diamond_boots{Enchantments:[{lvl:2s,id:'minecraft:blast_protection'},{lvl:2s,id:'minecraft:unbreaking'}]},minecraft:diamond_helmet{Enchantments:[{lvl:3s,id:'minecraft:fire_protection'},{lvl:3s,id:'minecraft:unbreaking'}]},minecraft:diamond_chestplate{Enchantments:[{lvl:4s,id:'minecraft:projectile_protection'},{lvl:3s,id:'minecraft:unbreaking'}]}",
+      "sell5": "minecraft:enchanted_book{StoredEnchantments:[{lvl:4s,id:'minecraft:protection'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:4s,id:'minecraft:blast_protection'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:4s,id:'minecraft:fire_protection'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:4s,id:'minecraft:projectile_protection'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:4s,id:'minecraft:feather_falling'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:3s,id:'minecraft:thorns'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:3s,id:'spartanshields:spikes'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:2s,id:'spartanshields:firebrand'}]},minecraft:enchanted_book{StoredEnchantments:[{lvl:4s,id:'spartanshields:payback'}]}",
+      "sell6": "minecraft:totem_of_undying",
+      "rec": "Receive",
+      "rec1": "minecraft:coal"
+    }
+  ]
+}

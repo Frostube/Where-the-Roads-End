@@ -1,0 +1,25 @@
+{
+  "name": "开始游戏",
+  "icon": "minecraft:iron_sword",
+  "category": "patchouli:info",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "p_text",
+      "text": "“云层压在天际，狂风裹挟着腐臭气息，肆虐在荒芜的旷野。远处，失落城市在阴霾中若隐若现，阴森可怖。然而，就在这片死寂里，一抹暖光从视野边缘逸出，村庄里或许有村民，末世中的帮手...”"
+    },
+    {
+      "type": "p_text",
+      "text": "也许你已经注意到了自己不是赤手空拳，收好你的物品：$(br)$(l)$(li)荒野手册 *1$(li)木剑 *1$(li)木镐 *1$(li)木斧 *1$(li)牛排 *10$(li)背包 *1"
+    },
+    {
+      "type": "title_text",
+      "title": "启动游戏",
+      "text": "$(br)要开始游戏（尤其对于服务器），执行以下命令直接开始默认模式（需要作弊权限，入侵时间100天）：$(br)$(l)$(c:/zombiegame game start_game normal 100)/zombiegame game start_game normal 100$(/c)/$$(p)否则请改为执行（与聊天栏中[点这里]相同）：$(br)$(l)$(c:/zombiegame gui_set_up start_game)/zombiegame gui_set_up start_game$(/c)/$"
+    },
+    {
+      "type": "p_text",
+      "text": "如果误操作需要取消当前游戏，执行（需要作弊权限）：$(br)$(l)$(c:/zombiegame game cancel_game)/zombiegame game cancel_game$(/c)/$"
+    }
+  ]
+}
