@@ -93,6 +93,8 @@ EntityEvents.spawned(event => {
   if (entity.age > 0) return; // only count fresh spawns, not chunk-load re-adds
   if (!LOOSE_UNDEAD.has('' + entity.type)) return;
   try { if (entity.tags && entity.tags.contains(MIGRANT_TAG)) return; } catch (e) {}
+  // a green zone will remove this spawn -- don't count it toward the reserve
+  try { if (global.ZI_GREEN && global.ZI_GREEN.inAnyZone(entity.level, Math.floor(entity.x), Math.floor(entity.z))) return; } catch (e) {}
   const pd = reserveTag(entity.level);
   if (!pd) return;
   pd.putInt(RESERVE_KEY, pd.getInt(RESERVE_KEY) + 1);
@@ -131,6 +133,7 @@ function trySpawnMigrant(player, level, cfg) {
     var sx = px + ox;
     var sz = pz + oz;
     if (SAFE_ENABLED && sx >= SAFE_MIN_X && sx <= SAFE_MAX_X && sz >= SAFE_MIN_Z && sz <= SAFE_MAX_Z) continue; // safe zone
+    try { if (global.ZI_GREEN && global.ZI_GREEN.inAnyZone(level, sx, sz)) continue; } catch (e) {} // player green zones
 
     for (var dy = 8; dy >= -8; dy--) {
       var y = py + dy;

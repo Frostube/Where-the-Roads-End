@@ -1,5 +1,13 @@
 # Changelog — Where the Roads End
 
+## 2026-06-02 — Green zones (Phase 6 start)
+- **`zombie_green_zones.js`** (new) — player-declared reclaimed safe areas. Commands (cheats): `/zone pos1`, `/zone pos2`, `/zone create <name>`, `/zone list`, `/zone remove <name>`. Once declared, nothing **spawns** inside the box. Design decisions baked in:
+  - **Spawn-time removal only** (`entity.age 0`) — zombies that **walk/chase in are NOT despawned** (your walls still matter; no force-field cheese).
+  - **Corpse-zombies** (`hordes:*_player`, which carry the dead player's items) are **never** removed.
+  - **Auto-padding** (`ZI_ZONE_PAD = 1`) expands each zone outward to seal perimeter walls; zones are **full-height**.
+  - Must **clear the area** (no undead inside) before it can be declared green.
+  - Exposes `global.ZI_GREEN.inAnyZone`; migration skips green-zone spots and doesn't count zone-removed spawns toward the reserve.
+
 ## 2026-06-02 — Phase 2 systems
 
 ### New mechanics
