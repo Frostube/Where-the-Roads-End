@@ -29,7 +29,9 @@
     "sfiomn.legendarysurvivaloverhaul.client.screens.BodyHealthScreen": true,
     "net.minecraft.client.gui.screens.controls.ControlsScreen": true,
     "com.blamejared.controlling.client.NewKeyBindsScreen": true,
-    "net.diebuddies.physics.settings.PhysicsSettingsScreen": true
+    "net.diebuddies.physics.settings.PhysicsSettingsScreen": true,
+    "net.minecraft.client.gui.screens.ChatOptionsScreen": true,
+    "me.shedaniel.clothconfig2.gui.ClothConfigScreen": true
   },
   "hideBackground": {
     "me.shedaniel.rei.impl.client.gui.screen.DefaultDisplayViewingScreen": true,

@@ -1,5 +1,33 @@
 # Changelog — Where the Roads End
 
+## 2026-06-02 — Phase 2 systems
+
+### New mechanics
+- **`00_reclamation_phases.js`** — day-based apocalypse curve (0-30 fresh outbreak → 30-100 degradation → 100-250 reclamation window → 250+ residual dead); exposes `global.ZI_RECLAMATION.getPhase(level)` for other scripts to scale off.
+- **`01_zombie_spawn_director.js`** — active-zombie budget guard (caps simultaneous physical undead so the area doesn't choke).
+- **`zombie_noise_lure.js`** — movement/jumping/mining/placing pulls nearby undead toward the survivor; phase-scaled radius.
+- **`zombie_stealth.js`** (new) — inverse of the lure: crouching clears nearby undead targets every 2 ticks (beyond ~2.5-block point-blank) so a quiet survivor can sneak past / break away within ~16 blocks. Also muted movement-noise in the lure while crouched (mining still lures).
+- Phase-scaling added to `zombie_buff.js` and `zombie_migration.js`; tuning to `zombie_softblock_break.js`, configs, and `options.txt`.
+
+## 2026-06-01 Phase 2
+- Added `01_zombie_spawn_director.js`, an MVP active-zombie budget guard. Spawner/check-spawn attempts are canceled when local or player-area zombie caps are full, preserving pressure without simulating hundreds of active zombies.
+- Director now actively virtualizes over-cap ordinary undead back into the loose reserve, which handles maps/chunks that load hundreds of pre-existing zombies before spawn cancellation can help.
+- Migration now respects the director budget before releasing migrants, and clock debug reports local/area director usage.
+- Added a KubeJS noise-lure layer so player movement, jumping, block mining/breaking, and block placing actively pull nearby undead toward the survivor.
+- Noise lure now ignores spectator/creative players and caps how many undead each noise pulse can directly pull.
+- Expanded zombie block chewing to more intuitive soft/wooden house materials: chests, barrels, crafting/work tables, signs, ladders, scaffolding, bookshelves, beds, wool/carpet/banner interiors, related wooden details, and matching modded blocks by name pattern.
+- Capped per-block crowd pressure so a swarm breaches faster than one zombie, but hundreds of zombies do not instantly erase a door.
+- Natural ground digging now includes grass blocks and similar surface blocks, but only digs downward when the survivor/noise is below the undead to avoid random surface cratering.
+- Strengthened Zombie Awareness sound/pathing settings so undead investigate nearby noise more reliably.
+- Added `00_reclamation_phases.js` as the single KubeJS source of truth for the day-based zombie curve:
+  - Days 0-30: P1 Fresh Outbreak, brutal surface pressure.
+  - Days 30-100: P2 Degradation, short expeditions become possible.
+  - Days 100-250: P3 Reclamation Window, clearing buildings/streets/blocks becomes viable.
+  - Day 250+: P4 Residual Dead, rebuilding with rare deadly returns.
+- Wired the curve into zombie buffs, finite migration pacing/burst size, and block-chewing pressure.
+- Expanded phase handling and Zombie Awareness targeting to the vanilla + Hordes undead variants.
+- Clock debug now reports current reclamation phase as well as loose zombie reserve.
+
 ## 2026-06-01
 - **Declutter — disabled 7 unused mods → 206 active jars** (all intentional; world snapshotted before the content/worldgen ones, loaded through the missing-content screen, base verified intact):
   - `tacz` (Timeless & Classics Guns: Zero) — unused, poor shader rendering, no dependents. (`tacz/` + `tacz_backup/` data folders left on disk; can delete to reclaim space.)

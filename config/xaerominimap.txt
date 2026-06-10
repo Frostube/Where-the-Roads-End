@@ -9,7 +9,7 @@ radarHideInvisibleEntities:true
 allowInternetAccess:true
 #INGAME SETTINGS (DO NOT EDIT!)
 updateNotification:false
-minimap:false
+minimap:true
 caveMaps:2
 caveZoom:0
 showWaypoints:true
@@ -133,4 +133,4 @@ infoDisplay:custom_sub_world:true:15:-1
 seed:Multiplayer_frp-gap.top/dim%0_mw0,1,0:4325227337
 seed:Multiplayer_cn-bj-bgp-1.natfrp.cloud/dim%0_mw-1,1,-1:622048288
 seed:Multiplayer_frp-gap.top/dim%0_mw$default:4325227337
-module;id=xaerominimap:minimap;active=false;x=-103;y=0;centered=false;fromRight=true;fromBottom=false;flippedVer=false;flippedHor=false;
+module;id=xaerominimap:minimap;active=true;x=-103;y=0;centered=false;fromRight=true;fromBottom=false;flippedVer=false;flippedHor=false;

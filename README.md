@@ -23,10 +23,15 @@ world saves, logs and caches are intentionally **not** committed (see `.gitignor
 
 ## Custom scripts
 
+- **`00_reclamation_phases.js`** - day-based apocalypse curve: days 0-30 brutal outbreak, 30-100 degradation, 100-250 reclamation window, 250+ residual dead.
+- **`01_zombie_spawn_director.js`** - active zombie budget guard: local/player-area caps prevent 600 physical zombies from simulating at once.
 - **`zombie_softblock_break.js`** — undead chew soft blocks instantly, wood barricades after sustained pressure.
-- **`zombie_buff.js`** — tankier, faster, ~3–4-hit zombies; no reinforcement spam.
-- **`zombie_migration.js`** — finite "loose population" reserve, fed by spawners and drained by kills, that trickles toward you from the dead city; `/zspawn [n]` forces a wave; base safe-zone excluded.
-- **`zombie_reserve_debug.js`** — hold a clock to read the current reserve (debug).
+- **`zombie_buff.js`** — phase-scaled undead attributes; no reinforcement spam.
+- **`zombie_migration.js`** — phase-scaled finite "loose population" reserve, fed by spawners and drained by kills, that trickles toward you from the dead city; `/zspawn [n]` forces a wave; base safe-zone excluded.
+- **`zombie_noise_lure.js`** - player movement, jumping, block mining/breaking, and block placing pull nearby undead toward the survivor.
+- **`zombie_stealth.js`** - the inverse of the noise lure: while crouched, nearby undead lose your trail (beyond point-blank ~2.5 blocks), and sneak-walking stops luring. Sneak past or break away.
+- **`zombie_reserve_debug.js`** — hold a clock to read the current phase/reserve (debug).
+- Zombie Awareness tracks the same vanilla/Hordes undead set used by the KubeJS phase systems.
 
 ## Restore / setup
 

@@ -3,22 +3,22 @@
 [general]
 	#Max awareness range for zombies
 	#Range: > -2147483648
-	maxPFRangeSense = 48
+	maxPFRangeSense = 80
 	#Prevent non zombies from being attracted to light
 	awareness_Light_OnlyZombies = false
 	#Custom targetting sight range on top of vanilla sight based targetting
 	#Range: > -2147483648
-	sightRange = 8
+	sightRange = 12
 	#Always target closest player [performance sensitive]
 	omniscient = false
 	#skips line of sight check on targetting [performance sensitive]
 	seeThroughWalls = false
 	#Effects how far monsters will sense scents from
 	#Range: > -2147483648
-	scentStrength = 24
+	scentStrength = 36
 	#Effects how far monsters will sense sound sources from
 	#Range: > -2147483648
-	soundStrength = 32
+	soundStrength = 72
 	#max rate of spawning sound sources in milliseconds
 	#Range: > -2147483648
 	frequentSoundThreshold = 1000
@@ -33,7 +33,7 @@
 	tickRatePlayerLoop = 20
 	#How long before a mob can move around again to track a light source, or scent, or sound, increase number to reduce performance impact of mod if needed
 	#Range: > -2147483648
-	tickCooldownBetweenPathfinds = 300
+	tickCooldownBetweenPathfinds = 100
 	#How likely zombies making noise near you will attract other zombies, higher = less likely, 0 = every time they make a noise
 	#Range: > -2147483648
 	noisyZombiesReinforceOddsTo1 = 5
@@ -58,10 +58,10 @@
 	blockHittingEvent_Active = true
 	#Odds of hitting a block causing a sound sense, rolled per tick
 	#Range: > -2147483648
-	blockHittingEvent_OddsTo1 = 20
+	blockHittingEvent_OddsTo1 = 5
 	#Only spawn sound senses for players, if false, machines and other things will cause them too
 	blockBreakEvent_PlayersOnly = false
 	#Every 2 seconds, the percent chance a mob has to look for an active sense in range, 100 = nearly instant, 10 = slowly over time, performance sensitive setting, higher = more frequent pathfind attempts
 	#Range: > -2147483648
-	findSense_PercentChance = 10
+	findSense_PercentChance = 35
 

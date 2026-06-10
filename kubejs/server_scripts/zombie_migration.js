@@ -25,17 +25,25 @@ const LOOSE_UNDEAD = new Set([
   'minecraft:husk',
   'minecraft:drowned',
   'minecraft:zombie_villager',
-  'minecraft:zombified_piglin'
+  'minecraft:zombified_piglin',
+  'hordes:zombie_player',
+  'hordes:husk_player',
+  'hordes:drowned_player'
 ]);
 
-// --- TRICKLE pacing knobs (tweak to taste) ---
-const INTERVAL = 14400;       // base ticks between migration attempts (~12 min)
-const INTERVAL_JITTER = 3600; // up to +3 min of randomness on top
-const QUIET_RADIUS = 48;      // only migrate if the area within this is calm
-const QUIET_MAX = 4;          // "calm" = fewer than this many undead nearby
-const MIN_DIST = 96;          // how far out a migrant appears (blocks)
-const MAX_DIST = 120;         // capped near render distance (8 chunks = 128 blocks):
-                              // beyond loaded chunks a migrant can't tick or path to you
+// --- TRICKLE pacing defaults (phase-aware values live in 00_reclamation_phases.js) ---
+const DEFAULT_MIGRATION = {
+  interval: 14400,      // base ticks between migration attempts (~12 min)
+  jitter: 3600,         // up to +3 min of randomness on top
+  quietRadius: 48,      // only migrate if the area within this is calm
+  quietMax: 4,          // "calm" = fewer than this many undead nearby
+  minDist: 96,          // how far out a migrant appears (blocks)
+  maxDist: 120,         // capped near render distance (8 chunks = 128 blocks)
+  chance: 1.0,
+  minBurst: 1,
+  maxBurst: 1,
+  message: 'A distant moan drifts in from the city...'
+};
 const SPAWN_TRIES = 50;       // attempts to find a valid open spot per migration
 // Safe zone (box): migrants NEVER spawn inside this X/Z rectangle, at any height
 // -- your base perimeter. Set SAFE_ENABLED = false to turn it off.
@@ -51,6 +59,26 @@ const DEBUG = false;          // true -> log reserve changes to server console
 const cooldown = {};
 
 function isAir(block) { return block && block.id === 'minecraft:air'; }
+
+function migrationConfig(level) {
+  try {
+    if (global.ZI_RECLAMATION && typeof global.ZI_RECLAMATION.getPhase === 'function') {
+      var phase = global.ZI_RECLAMATION.getPhase(level);
+      if (phase && phase.migration) return phase.migration;
+    }
+  } catch (e) {}
+  return DEFAULT_MIGRATION;
+}
+
+function nextCooldown(cfg) {
+  return cfg.interval + Math.floor(Math.random() * cfg.jitter);
+}
+
+function burstSize(cfg) {
+  var min = Math.max(1, cfg.minBurst || 1);
+  var max = Math.max(min, cfg.maxBurst || min);
+  return min + Math.floor(Math.random() * (max - min + 1));
+}
 
 function reserveTag(level) {
   const server = level.server;
@@ -86,16 +114,18 @@ var ZI_FORCE_SPAWN = 0;
 
 // Find a valid spot in the ring (outside the safe zone) and spawn one migrant
 // that heads for the player. Returns true on success.
-function trySpawnMigrant(player, level) {
+function trySpawnMigrant(player, level, cfg) {
   const px = Math.floor(player.x), py = Math.floor(player.y), pz = Math.floor(player.z);
   if (isNaN(px) || isNaN(py) || isNaN(pz)) return false;
-  var minSq = MIN_DIST * MIN_DIST;
-  var maxSq = MAX_DIST * MAX_DIST;
+  var minDist = cfg.minDist || DEFAULT_MIGRATION.minDist;
+  var maxDist = cfg.maxDist || DEFAULT_MIGRATION.maxDist;
+  var minSq = minDist * minDist;
+  var maxSq = maxDist * maxDist;
 
   for (var i = 0; i < SPAWN_TRIES; i++) {
-    // random offset within the ring [MIN_DIST, MAX_DIST] (no trig: Math.cos/sin/PI = NaN here)
-    var ox = Math.floor((Math.random() * 2 - 1) * MAX_DIST);
-    var oz = Math.floor((Math.random() * 2 - 1) * MAX_DIST);
+    // random offset within the ring [minDist, maxDist] (no trig: Math.cos/sin/PI = NaN here)
+    var ox = Math.floor((Math.random() * 2 - 1) * maxDist);
+    var oz = Math.floor((Math.random() * 2 - 1) * maxDist);
     var dsq = ox * ox + oz * oz;
     if (dsq < minSq || dsq > maxSq) continue;
     var sx = px + ox;
@@ -109,6 +139,9 @@ function trySpawnMigrant(player, level) {
       var head = level.getBlock(sx, y + 1, sz);
       if (!ground || isAir(ground)) continue;
       if (!isAir(feet) || !isAir(head)) continue;
+      try {
+        if (global.ZI_ZOMBIE_DIRECTOR && !global.ZI_ZOMBIE_DIRECTOR.canSpawnAt(level, sx, y, sz)) continue;
+      } catch (e) {}
 
       var migrant = level.createEntity('minecraft:zombie');
       migrant.setPosition(sx + 0.5, y, sz + 0.5);
@@ -126,41 +159,51 @@ PlayerEvents.tick(event => {
   const player = event.player;
   const level = player.level;
   if (!level || level.isClientSide()) return;
+  const cfg = migrationConfig(level);
 
   // forced wave from /zspawn -- bypasses cooldown + quiet check (still respects safe zone)
   if (ZI_FORCE_SPAWN > 0) {
     var burst = ZI_FORCE_SPAWN;
     ZI_FORCE_SPAWN = 0;
     var made = 0;
-    for (var f = 0; f < burst; f++) { if (trySpawnMigrant(player, level)) made++; }
+    for (var f = 0; f < burst; f++) { if (trySpawnMigrant(player, level, cfg)) made++; }
     if (made > 0) { try { player.tell(Text.red('A horde stirs nearby... (' + made + ' incoming)')); } catch (e) {} }
   }
 
   const key = '' + player.uuid;
   const cd = cooldown[key];
   if (cd === undefined || cd > 0) {
-    cooldown[key] = (cd === undefined ? INTERVAL : cd) - 1;
-    if (cd === undefined) cooldown[key] = INTERVAL + Math.floor(Math.random() * INTERVAL_JITTER);
+    var remaining = cd === undefined ? nextCooldown(cfg) : cd - 1;
+    var phaseMax = cfg.interval + cfg.jitter;
+    cooldown[key] = remaining > phaseMax ? phaseMax : remaining;
     return;
   }
   // cooldown elapsed -> reset now regardless of outcome
-  cooldown[key] = INTERVAL + Math.floor(Math.random() * INTERVAL_JITTER);
+  cooldown[key] = nextCooldown(cfg);
 
   const pd = reserveTag(level);
   if (!pd) return;
   const reserve = pd.getInt(RESERVE_KEY);
   if (reserve <= 0) return;
+  if (Math.random() > (cfg.chance || 1.0)) return;
 
   // only migrate into a calm area (don't pile on during a fight)
+  var quietRadius = cfg.quietRadius || DEFAULT_MIGRATION.quietRadius;
   const near = level.getEntitiesWithin(AABB.of(
-    player.x - QUIET_RADIUS, player.y - QUIET_RADIUS, player.z - QUIET_RADIUS,
-    player.x + QUIET_RADIUS, player.y + QUIET_RADIUS, player.z + QUIET_RADIUS));
+    player.x - quietRadius, player.y - quietRadius, player.z - quietRadius,
+    player.x + quietRadius, player.y + quietRadius, player.z + quietRadius));
   let count = 0;
   near.forEach(e => { if (LOOSE_UNDEAD.has('' + e.type)) count++; });
-  if (count >= QUIET_MAX) return;
+  if (count >= (cfg.quietMax || DEFAULT_MIGRATION.quietMax)) return;
 
-  if (trySpawnMigrant(player, level) && NOTIFY) {
-    try { player.tell(Text.gray('A distant moan drifts in from the city...')); } catch (e) {}
+  var incoming = Math.min(burstSize(cfg), Math.max(1, reserve));
+  var spawned = 0;
+  for (var i = 0; i < incoming; i++) {
+    if (trySpawnMigrant(player, level, cfg)) spawned++;
+  }
+
+  if (spawned > 0 && NOTIFY) {
+    try { player.tell(Text.gray(cfg.message || DEFAULT_MIGRATION.message)); } catch (e) {}
   }
 });
 

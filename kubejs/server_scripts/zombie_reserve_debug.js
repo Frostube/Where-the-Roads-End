@@ -27,6 +27,14 @@ PlayerEvents.tick(event => {
   if (!server) { player.tell(Text.red('[reserve] level.server is null')); return; }
 
   const reserve = server.persistentData.getInt(DBG2_RESERVE_KEY);
+  let day = 0;
+  let phaseName = 'unknown phase';
+  try {
+    if (global.ZI_RECLAMATION) {
+      day = global.ZI_RECLAMATION.getDay(level);
+      phaseName = global.ZI_RECLAMATION.getPhaseForDay(day).name;
+    }
+  } catch (e) {}
 
   // dump distinct mob types within 64 blocks so we can identify the zombies
   const types = {};
@@ -45,6 +53,12 @@ PlayerEvents.tick(event => {
   let summary = keys.map(k => k + ' x' + types[k]).join(', ');
   if (!summary) summary = '(no mobs within 64 blocks)';
 
+  player.tell(Text.yellow('[phase] day ' + day + ' - ' + phaseName));
   player.tell(Text.yellow('[reserve] loose zombies = ' + reserve));
+  try {
+    if (global.ZI_ZOMBIE_DIRECTOR) {
+      player.tell(Text.yellow('[director] ' + global.ZI_ZOMBIE_DIRECTOR.summary(level, player)));
+    }
+  } catch (e) {}
   player.tell(Text.gray('nearby mobs: ' + summary));
 });

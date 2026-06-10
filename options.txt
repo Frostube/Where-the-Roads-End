@@ -32,7 +32,7 @@ damageTiltStrength:1.0
 highContrast:false
 gamma:0.5
 renderDistance:8
-simulationDistance:8
+simulationDistance:6
 entityDistanceScaling:0.75
 guiScale:4
 particles:1
@@ -42,7 +42,7 @@ ao:true
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:"false"
-resourcePacks:["vanilla","tacz_resources","mod_resources","Moonlight Mods Dynamic Assets","TZP_1.20.1_2.7.zip","fabric","continuity:default","file/OWZA_Pack_v1.0.0.zip","file/Bushy pink petals, wildflowers \u0026 leaf litter.zip","file/Connected-Bricks 1.14-1.21.3 v1.0.zip","file/Connected-Paths 1.14-1.21.8 v2.1.1.zip","file/Connected-Rocks 1.14-1.21.8 v1.1.1.zip","file/Fancy Crops v1.3.zip","file/Fire_Rekindled.zip","file/Gentler Weather Sounds 2.2.0.zip","file/§eTorches§8-§eReimagined§0_§8[v1.7.2]§0.zip"]
+resourcePacks:["vanilla","mod_resources","Moonlight Mods Dynamic Assets","TZP_1.20.1_2.7.zip","fabric","continuity:default","file/OWZA_Pack_v1.0.0.zip","file/Bushy pink petals, wildflowers \u0026 leaf litter.zip","file/Connected-Bricks 1.14-1.21.3 v1.0.zip","file/Connected-Paths 1.14-1.21.8 v2.1.1.zip","file/Connected-Rocks 1.14-1.21.8 v1.1.1.zip","file/Fancy Crops v1.3.zip","file/Fire_Rekindled.zip","file/Gentler Weather Sounds 2.2.0.zip","file/§eTorches§8-§eReimagined§0_§8[v1.7.2]§0.zip"]
 incompatibleResourcePacks:["file/OWZA_Pack_v1.0.0.zip","file/Connected-Bricks 1.14-1.21.3 v1.0.zip","file/Connected-Paths 1.14-1.21.8 v2.1.1.zip","file/Connected-Rocks 1.14-1.21.8 v1.1.1.zip","file/Fire_Rekindled.zip"]
 lastServer:
 lang:en_us
@@ -186,11 +186,11 @@ key_keybind.sophisticatedbackpacks.open_backpack:key.keyboard.b
 key_keybind.sophisticatedbackpacks.inventory_interaction:key.keyboard.c
 key_keybind.sophisticatedbackpacks.tool_swap:key.keyboard.unknown
 key_keybind.sophisticatedbackpacks.sort:key.mouse.middle
+key_keybind.sophisticatedbackpacks.toggle_upgrade_1:key.keyboard.z:ALT
 key_keybind.sophisticatedbackpacks.toggle_upgrade_2:key.keyboard.x:ALT
 key_keybind.sophisticatedbackpacks.toggle_upgrade_3:key.keyboard.unknown
 key_keybind.sophisticatedbackpacks.toggle_upgrade_4:key.keyboard.unknown
 key_keybind.sophisticatedbackpacks.toggle_upgrade_5:key.keyboard.unknown
-key_keybind.sophisticatedbackpacks.toggle_upgrade_1:key.keyboard.z:ALT
 key_key.superbwarfare.reload:key.keyboard.r
 key_key.superbwarfare.fire_mode:key.keyboard.n
 key_key.superbwarfare.sensitivity_increase:key.keyboard.page.up
@@ -219,17 +219,6 @@ key_key.legendarysurvivaloverhaul.added_desc:key.keyboard.left.shift
 key_key.legendarysurvivaloverhaul.body_health:key.keyboard.h
 key_key.curios.open.desc:key.keyboard.g
 key_key.spartanweaponry.access_quiver:key.keyboard.i
-key_key.tacz.inspect.desc:key.keyboard.h
-key_key.tacz.reload.desc:key.keyboard.r
-key_key.tacz.shoot.desc:key.mouse.left
-key_key.tacz.interact.desc:key.keyboard.o
-key_key.tacz.fire_select.desc:key.keyboard.g
-key_key.tacz.aim.desc:key.mouse.right
-key_key.tacz.crawl.desc:key.keyboard.c
-key_key.tacz.refit.desc:key.keyboard.z
-key_key.tacz.zoom.desc:key.keyboard.v
-key_key.tacz.melee.desc:key.keyboard.v
-key_key.tacz.open_config.desc:key.keyboard.t:ALT
 key_key.toastcontrol.clear:key.keyboard.j
 key_key.azurelib.reload:key.keyboard.r
 key_key.azurelib.scope:key.keyboard.left.alt
@@ -267,7 +256,7 @@ key_quark.keybind.patreon_emote.zombie:key.keyboard.unknown
 key_quark.keybind.change_hotbar:key.keyboard.z
 key_quark.keybind.sort_player:key.keyboard.unknown
 key_quark.keybind.sort_container:key.keyboard.unknown
-key_quark.keybind.lock_rotation:key.keyboard.k
+key_quark.keybind.lock_rotation:key.keyboard.unknown
 key_quark.keybind.narrator_readout:key.keyboard.unknown
 key_quark.keybind.narrator_full_readout:key.keyboard.unknown
 key_quark.keybind.variant_selector:key.keyboard.r

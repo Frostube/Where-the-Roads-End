@@ -32,6 +32,7 @@
         "enable_profiles_ui": {
             "value": false
         },
+        "continuous_crafting_saved_value": false,
         "regular_sort_order": "DEFAULT",
         "show_sort_in_columns_button": {
             "value": false
