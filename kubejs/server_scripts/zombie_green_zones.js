@@ -6,19 +6,18 @@
 // natural spawns, reinforcements: anything that tries to spawn in the box is
 // removed at the moment of spawn. Cleared land stays cleared.
 //
-// IMPORTANT design choices baked in:
-//   * Removal fires ONLY at spawn time (entity.age 0). A zombie that WALKS/chases
-//     in is NOT despawned -- your walls still matter, no force-field cheese.
-//   * Death/corpse zombies (hordes:*_player, which carry your items) are NEVER
-//     removed, even inside a zone -- you don't lose your loot.
-//   * Zones auto-PAD outward by ZI_ZONE_PAD blocks so your perimeter WALLS are
-//     sealed inside the zone (a zombie can't spawn on the wall and drop in).
-//   * Zones are full-height (any Y) and you must actually CLEAR the area (no
-//     undead inside) before you can declare it.
+// Design choices:
+//   * Removal fires ONLY at spawn time (entity.age 0). A zombie that WALKS in is
+//     NOT despawned -- walls still matter, no force-field cheese.
+//   * Corpse-zombies (hordes:*_player, carry your items) are NEVER removed.
+//   * Zones auto-PAD outward (ZI_ZONE_PAD) so perimeter walls are sealed inside.
+//   * Full-height; you must CLEAR the area (no undead inside) before declaring.
 //
-// Commands (need cheats): /zone pos1 | pos2 | create <name> | list | remove <name>
-// Exposes global.ZI_GREEN.inAnyZone(level, x, z) for migration etc.
-// (Single-player MVP: one global pending-corner / request slot.)
+// Commands (need cheats): /zone pos1 | pos2 | create <name> | list | remove <name> | show
+//   - show: briefly outlines nearby zones with particles
+// Indicator: action-bar message when you enter/leave a zone.
+// Base fold-in: the old hardcoded migration safe-box is seeded here as zone "base".
+// Exposes global.ZI_GREEN.inAnyZone(level, x, z). Single-player MVP (one global slot).
 // ---------------------------------------------------------------------------
 
 const ZI_ZONES_KEY = 'zi_green_zones';
@@ -41,6 +40,11 @@ const ZI_ZONE_PROTECT = new Set([
 var ZI_ZONE_CACHE = null;   // parsed zones array (null = (re)load from persistentData)
 var ZI_ZONE_REQ = null;     // single pending /zone request (solo MVP)
 var ZI_ZONE_PENDING = {};   // c1/c2 marked corners (solo MVP)
+var ZI_ZONE_SHOW_UNTIL = 0; // /zone show: draw outlines until this player.age
+var ZI_ZONE_CURRENT = {};   // uuid -> name of the zone the player is currently inside
+var ZI_BASE_SEEDED = false; // one-time fold of the old hardcoded base box into zones
+// the old migration safe-box (71..123, 122..303), padded, folded in as zone "base"
+const ZI_BASE_ZONE = { name: 'base', minX: 71 - ZI_ZONE_PAD, maxX: 123 + ZI_ZONE_PAD, minZ: 122 - ZI_ZONE_PAD, maxZ: 303 + ZI_ZONE_PAD };
 
 function ziZonesGet(level) {
   if (ZI_ZONE_CACHE !== null) return ZI_ZONE_CACHE;
@@ -56,17 +60,41 @@ function ziZonesSave(level, arr) {
   try { level.server.persistentData.putString(ZI_ZONES_KEY, JSON.stringify(arr)); } catch (e) {}
 }
 
-function ziInAnyZone(level, x, z) {
+function ziZoneAt(level, x, z) {
   var zones = ziZonesGet(level);
   for (var i = 0; i < zones.length; i++) {
     var b = zones[i];
-    if (x >= b.minX && x <= b.maxX && z >= b.minZ && z <= b.maxZ) return true;
+    if (x >= b.minX && x <= b.maxX && z >= b.minZ && z <= b.maxZ) return b.name;
   }
-  return false;
+  return null;
+}
+
+function ziInAnyZone(level, x, z) {
+  return ziZoneAt(level, x, z) !== null;
 }
 
 // expose for migration / other scripts (matches the global.ZI_* convention)
 global.ZI_GREEN = { inAnyZone: ziInAnyZone };
+
+// /zone show: sparkle the edges of zones near the player (nearby segments only, capped)
+function ziDrawZones(level, player) {
+  var zones = ziZonesGet(level);
+  var py = Math.floor(player.y);
+  var WIN = 48, STEP = 2, CAP = 240, drawn = 0;
+  for (var i = 0; i < zones.length && drawn < CAP; i++) {
+    var b = zones[i];
+    var pts = [];
+    for (var x = b.minX; x <= b.maxX; x += STEP) { pts.push([x, b.minZ]); pts.push([x, b.maxZ]); }
+    for (var z = b.minZ; z <= b.maxZ; z += STEP) { pts.push([b.minX, z]); pts.push([b.maxX, z]); }
+    for (var p = 0; p < pts.length && drawn < CAP; p++) {
+      var ex = pts[p][0], ez = pts[p][1];
+      var ddx = ex - player.x, ddz = ez - player.z;
+      if (ddx * ddx + ddz * ddz > WIN * WIN) continue; // only the edge near you
+      try { level.spawnParticles('minecraft:happy_villager', true, ex + 0.5, py + 1, ez + 0.5, 0, 0.05, 0, 1, 0); } catch (e) {}
+      drawn++;
+    }
+  }
+}
 
 // --- ENFORCEMENT: remove WILD undead that SPAWN inside a zone (not corpses, not walk-ins) ---
 EntityEvents.spawned(event => {
@@ -80,7 +108,42 @@ EntityEvents.spawned(event => {
   try { entity.discard(); } catch (e) {}      // silent removal (no death -> no reserve change)
 });
 
-// --- /zone request processor (runs with reliable player + level + persistentData) ---
+// --- passive: one-time base seed, in-zone indicator, /zone show drawing ---
+PlayerEvents.tick(event => {
+  var player = event.player;
+  var level = player.level;
+  if (!level || level.isClientSide()) return;
+
+  // one-time: fold the old hardcoded base safe-box into the green-zone list
+  if (!ZI_BASE_SEEDED) {
+    ZI_BASE_SEEDED = true;
+    try {
+      var zs = ziZonesGet(level);
+      var hasBase = false;
+      for (var i = 0; i < zs.length; i++) { if (zs[i].name === 'base') hasBase = true; }
+      if (!hasBase) { zs.push(ZI_BASE_ZONE); ziZonesSave(level, zs); }
+    } catch (e) {}
+  }
+
+  if (player.age % 10 !== 0) return; // throttle the rest
+
+  // in-zone indicator (enter/leave via action bar)
+  var here = ziZoneAt(level, Math.floor(player.x), Math.floor(player.z));
+  var key = '' + player.uuid;
+  if (here !== ZI_ZONE_CURRENT[key]) {
+    var prev = ZI_ZONE_CURRENT[key];
+    ZI_ZONE_CURRENT[key] = here;
+    try {
+      if (here) player.displayClientMessage(Text.green('[SAFE] entered zone: ' + here), true);
+      else if (prev) player.displayClientMessage(Text.gold('[!] left zone: ' + prev), true);
+    } catch (e) {}
+  }
+
+  // /zone show
+  if (player.age < ZI_ZONE_SHOW_UNTIL) ziDrawZones(level, player);
+});
+
+// --- /zone request processor (reliable player + level + persistentData) ---
 PlayerEvents.tick(event => {
   if (!ZI_ZONE_REQ) return;
   var player = event.player;
@@ -99,6 +162,12 @@ PlayerEvents.tick(event => {
     return;
   }
 
+  if (req.action === 'show') {
+    ZI_ZONE_SHOW_UNTIL = player.age + 160; // ~8s
+    try { player.tell(Text.yellow('[zone] outlining nearby zones for 8s')); } catch (e) {}
+    return;
+  }
+
   if (req.action === 'create') {
     var c1 = ZI_ZONE_PENDING.c1, c2 = ZI_ZONE_PENDING.c2;
     if (!c1 || !c2) {
@@ -110,7 +179,6 @@ PlayerEvents.tick(event => {
     var minZ = Math.min(c1.z, c2.z) - ZI_ZONE_PAD;
     var maxZ = Math.max(c1.z, c2.z) + ZI_ZONE_PAD;
 
-    // require the area to actually be CLEAR before it can be declared green
     var n = 0;
     try {
       var inside = level.getEntitiesWithin(AABB.of(minX, player.y - 64, minZ, maxX, player.y + 64, maxZ));
@@ -132,11 +200,11 @@ PlayerEvents.tick(event => {
   }
 
   if (req.action === 'list') {
-    var zs = ziZonesGet(level);
-    if (zs.length === 0) { try { player.tell(Text.yellow('[zone] no green zones yet')); } catch (e) {} return; }
-    try { player.tell(Text.yellow('[zone] ' + zs.length + ' green zone(s):')); } catch (e) {}
-    for (var i = 0; i < zs.length; i++) {
-      var b = zs[i];
+    var zlist = ziZonesGet(level);
+    if (zlist.length === 0) { try { player.tell(Text.yellow('[zone] no green zones yet')); } catch (e) {} return; }
+    try { player.tell(Text.yellow('[zone] ' + zlist.length + ' green zone(s):')); } catch (e) {}
+    for (var i = 0; i < zlist.length; i++) {
+      var b = zlist[i];
       try { player.tell(Text.gray('  - ' + b.name + ': (' + b.minX + ',' + b.minZ + ') to (' + b.maxX + ',' + b.maxZ + ')')); } catch (e) {}
     }
     return;
@@ -161,6 +229,7 @@ ServerEvents.commandRegistry(event => {
       .then(Commands.literal('pos1').executes(ctx => { ZI_ZONE_REQ = { action: 'pos1' }; return 1; }))
       .then(Commands.literal('pos2').executes(ctx => { ZI_ZONE_REQ = { action: 'pos2' }; return 1; }))
       .then(Commands.literal('list').executes(ctx => { ZI_ZONE_REQ = { action: 'list' }; return 1; }))
+      .then(Commands.literal('show').executes(ctx => { ZI_ZONE_REQ = { action: 'show' }; return 1; }))
       .then(Commands.literal('create')
         .then(Commands.argument('name', Arguments.STRING.create(event))
           .executes(ctx => { ZI_ZONE_REQ = { action: 'create', name: '' + Arguments.STRING.getResult(ctx, 'name') }; return 1; })))

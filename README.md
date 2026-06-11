@@ -30,7 +30,7 @@ world saves, logs and caches are intentionally **not** committed (see `.gitignor
 - **`zombie_migration.js`** — phase-scaled finite "loose population" reserve, fed by spawners and drained by kills, that trickles toward you from the dead city; `/zspawn [n]` forces a wave; base safe-zone excluded.
 - **`zombie_noise_lure.js`** - player movement, jumping, block mining/breaking, and block placing pull nearby undead toward the survivor.
 - **`zombie_stealth.js`** - the inverse of the noise lure: while crouched, nearby undead lose your trail (beyond point-blank ~2.5 blocks), and sneak-walking stops luring. Sneak past or break away.
-- **`zombie_green_zones.js`** - reclaimed safe areas. `/zone pos1|pos2|create <name>|list|remove <name>` (cheats) declare a cleared box; nothing **spawns** inside it (corpse-zombies excepted, walk-ins not despawned). Auto-pads to seal walls; full-height; must clear the area first.
+- **`zombie_green_zones.js`** - reclaimed safe areas. `/zone pos1|pos2|create <name>|list|remove <name>|show` (cheats) declare a cleared box; nothing **spawns** inside it (corpse-zombies excepted, walk-ins not despawned). Auto-pads to seal walls; full-height; must clear the area first. Action-bar enter/leave indicator; `/zone show` outlines nearby zones; your base is auto-folded in as zone "base".
 - **`zombie_reserve_debug.js`** — hold a clock to read the current phase/reserve (debug).
 - Zombie Awareness tracks the same vanilla/Hordes undead set used by the KubeJS phase systems.
 

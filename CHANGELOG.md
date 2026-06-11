@@ -1,5 +1,10 @@
 # Changelog — Where the Roads End
 
+## 2026-06-02 — Green-zone polish
+- **`/zone show`** — particle-outlines nearby zone edges for ~8s (nearby segments only, capped). Uses `level.spawnParticles` wrapped in try/catch — verify particles appear on first run.
+- **In-zone indicator** — action-bar `[SAFE] entered zone: X` / `[!] left zone: X` on enter/leave.
+- **Base folded into the zone system** — the old hardcoded migration base safe-box (71..123, 122..303) is one-time auto-seeded as zone `base`, so it now gets full spawn-suppression, not just migration-exclusion. Migration's `SAFE_*` left as a harmless redundant fallback.
+
 ## 2026-06-02 — Green zones (Phase 6 start)
 - **`zombie_green_zones.js`** (new) — player-declared reclaimed safe areas. Commands (cheats): `/zone pos1`, `/zone pos2`, `/zone create <name>`, `/zone list`, `/zone remove <name>`. Once declared, nothing **spawns** inside the box. Design decisions baked in:
   - **Spawn-time removal only** (`entity.age 0`) — zombies that **walk/chase in are NOT despawned** (your walls still matter; no force-field cheese).
